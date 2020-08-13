@@ -16,39 +16,44 @@ class Directory extends React.Component {
 		this.state = {
 			sections: [
 				{
-					title: "Oils",
+					title: "oils",
 					imageUrl: OilBanner,
 					id: 1,
+					linkUrl: "shop/oils",
 				},
 				{
-					title: "Scrubs",
+					title: "scrubs",
 					imageUrl: ScrubBanner,
 					id: 2,
+					linkUrl: "shop/scrubs",
 				},
 				{
-					title: "Flours",
+					title: "flours",
 					imageUrl: FlourBanner,
 					id: 3,
+					linkUrl: "shop/flours",
 				},
 				{
-					title: "Other",
+					title: "other",
 					imageUrl: OtherBanner,
 					size: "large",
 					id: 4,
+					linkUrl: "shop/other",
 				},
 				{
-					title: "All",
+					title: "all",
 					imageUrl: BodyOilBanner,
 					size: "large",
 					id: 5,
+					linkUrl: "Shop/all",
 				},
 			],
 		};
 	}
 
 	displayMenuItem = () => {
-		return this.state.sections.map(({ title, imageUrl, id, size }) => (
-			<MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+		return this.state.sections.map(({ id, ...otherSectionProps }) => (
+			<MenuItem key={id} { ...otherSectionProps } />
 		));
 	};
 

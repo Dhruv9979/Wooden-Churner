@@ -2,7 +2,7 @@ import React from 'react';
 
 import MenuItem from '../menu-item/menu-item.component';
 import OilBanner from '../../images/oil-banner.jpg';
-import BodyOilBanner from "../../images/body-oil-banner.jpg";
+import BodyOilBanner from "../../images/Body-Oil-Banner.jpg";
 import ScrubBanner from '../../images/scrub-banner.jpg';
 import FlourBanner from '../../images/flour-banner.jpg';
 import OtherBanner from '../../images/other-banner.jpg';

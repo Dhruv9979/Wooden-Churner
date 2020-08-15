@@ -45,7 +45,7 @@ class Directory extends React.Component {
 					imageUrl: BodyOilBanner,
 					size: "large",
 					id: 5,
-					linkUrl: "Shop/all",
+					linkUrl: "shop",
 				},
 			],
 		};

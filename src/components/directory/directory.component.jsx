@@ -1,11 +1,11 @@
 import React from 'react';
 
 import MenuItem from '../menu-item/menu-item.component';
-import OilBanner from '../../images/oil-banner.jpg';
+import OilBanner from '../../images/Oil-Banner.jpg';
 import BodyOilBanner from "../../images/Body-Oil-Banner.jpg";
-import ScrubBanner from '../../images/scrub-banner.jpg';
-import FlourBanner from '../../images/flour-banner.jpg';
-import OtherBanner from '../../images/other-banner.jpg';
+import ScrubBanner from '../../images/Scrub-Banner.jpg';
+import FlourBanner from '../../images/Flour-Banner.jpg';
+import OtherBanner from '../../images/Other-Banner.jpg';
 
 import './directory.styles.scss';
 

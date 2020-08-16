@@ -10,6 +10,24 @@
 
   .preview {
     display: flex;
-    justify-content: space-between;
   }
 }
+
+// .collection-preview {
+//   height: 90vh;
+//   margin: 2rem;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+
+//   .title {
+//     grid-row: 1; 
+//     grid-column: 1/5;
+//     font-size: 28px;
+//   }
+
+//   .preview {
+//     text-align: center;
+//     padding: 4rem;
+//   }
+// }

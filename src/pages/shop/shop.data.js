@@ -10,7 +10,7 @@ import FlaxseedFlour from "../../images/Flaxseed-Flour.jpg";
 import FlaxseedOil from "../../images/Flaxseed-Oil.png";
 import GroundnutOil from "../../images/Groundnut-Oil.jpg";
 import JaggeryPowder from "../../images/Jaggery-Powder.jpg";
-import KardiOil from "../../images/Kardi-Oil.png";
+import KardaiOil from "../../images/Kardi-Oil.png";
 import MustardOil from "../../images/Mustard-Oil.png";
 import RawSesameSeed from "../../images/Raw-Sesame-Seed.jpg";
 import RoastedFlaxseedTurmeric from "../../images/Roasted-Flaxseed-Turmeric.jpg";
@@ -38,7 +38,7 @@ const SHOP_DATA = [
 			},
 			{
 				id: 3,
-				name: "Groudnut Oil",
+				name: "Groundnut Oil",
 				imageUrl: GroundnutOil,
 				price: 35,
 			},
@@ -56,38 +56,32 @@ const SHOP_DATA = [
 			},
 			{
 				id: 6,
-				name: "Linseed Oil",
-				imageUrl: MustardOil,
-				price: 14,
-			},
-			{
-				id: 7,
 				name: "Flaxseed Oil",
 				imageUrl: FlaxseedOil,
 				price: 18,
 			},
 			{
-				id: 8,
+				id: 7,
 				name: "Black Sesame Oil",
 				imageUrl: BlackSesameOil,
 				price: 14,
 			},
 			{
-				id: 9,
+				id: 8,
 				name: "White Sesame Oil",
 				imageUrl: WhiteSesameOil,
 				price: 16,
 			},
 			{
-				id: 10,
+				id: 9,
 				name: "Diva Til Oil",
 				imageUrl: DivaTilOil,
 				price: 16,
 			},
 			{
-				id: 11,
+				id: 10,
 				name: "Kardai (Safflower) Oil",
-				imageUrl: KardiOil,
+				imageUrl: KardaiOil,
 				price: 16,
 			},
 		],

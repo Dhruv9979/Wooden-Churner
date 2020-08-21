@@ -1,23 +1,3 @@
-import AlmondOil from "../../images/Almond-Oil.png";
-import AlmondFlour from "../../images/Almond-Flour.jpg";
-import AlmondWalnutScrub from "../../images/Almond-Walnut-Scrub.jpg";
-import AwalaGinger from "../../images/Awala-Ginger.jpg";
-import BlackSesameOil from "../../images/Black-Sesame-Oil.png";
-import CoconutFlour from "../../images/Coconut-Flour.jpg";
-import CoconutOil from "../../images/Coconut-Oil.png";
-import DivaTilOil from "../../images/Diva-Til-Oil.jpg";
-import FlaxseedFlour from "../../images/Flaxseed-Flour.jpg";
-import FlaxseedOil from "../../images/Flaxseed-Oil.png";
-import GroundnutOil from "../../images/Groundnut-Oil.jpg";
-import JaggeryPowder from "../../images/Jaggery-Powder.jpg";
-import KardaiOil from "../../images/Kardi-Oil.png";
-import MustardOil from "../../images/Mustard-Oil.png";
-import RawSesameSeed from "../../images/Raw-Sesame-Seed.jpg";
-import RoastedFlaxseedTurmeric from "../../images/Roasted-Flaxseed-Turmeric.jpg";
-import RockSalt from "../../images/Rock-Salt.jpg";
-import WalnutOil from "../../images/Walnut-Oil.jpg";
-import WhiteSesameOil from "../../images/White-Sesame-Oil.png";
-
 const SHOP_DATA = [
 	{
 		id: 1,
@@ -27,61 +7,61 @@ const SHOP_DATA = [
 			{
 				id: 1,
 				name: "Almond Oil",
-				imageUrl: AlmondOil,
+				imageUrl: "https://i.ibb.co/bRYN3Bx/Almond-Oil.png",
 				price: 130,
 			},
 			{
 				id: 2,
 				name: "Walnut Oil",
-				imageUrl: WalnutOil,
+				imageUrl: "https://i.ibb.co/mG3cFn6/Walnut-Oil.jpg",
 				price: 130,
 			},
 			{
 				id: 3,
 				name: "Groundnut Oil",
-				imageUrl: GroundnutOil,
+				imageUrl: "https://i.ibb.co/8z8DvY6/Groundnut-Oil.jpg",
 				price: 190,
 			},
 			{
 				id: 4,
 				name: "Mustard Oil",
-				imageUrl: MustardOil,
+				imageUrl: "https://i.ibb.co/c1bkZPh/Mustard-Oil.png",
 				price: 80,
 			},
 			{
 				id: 5,
 				name: "Coconut Oil",
-				imageUrl: CoconutOil,
+				imageUrl: "https://i.ibb.co/cb17y30/Coconut-Oil.png",
 				price: 110,
 			},
 			{
 				id: 6,
 				name: "Flaxseed Oil",
-				imageUrl: FlaxseedOil,
+				imageUrl: "https://i.ibb.co/Xz8MgDY/Flaxseed-Oil.png",
 				price: 120,
 			},
 			{
 				id: 7,
 				name: "Black Sesame Oil",
-				imageUrl: BlackSesameOil,
+				imageUrl: "https://i.ibb.co/GTW0BDQ/Black-Sesame-Oil.png",
 				price: 120,
 			},
 			{
 				id: 8,
 				name: "White Sesame Oil",
-				imageUrl: WhiteSesameOil,
+				imageUrl: "https://i.ibb.co/CQMmWwH/White-Sesame-Oil.png",
 				price: 110,
 			},
 			{
 				id: 9,
 				name: "Diva Til Oil",
-				imageUrl: DivaTilOil,
+				imageUrl: "https://i.ibb.co/VLPzqLL/Diva-Til-Oil.jpg",
 				price: 95,
 			},
 			{
 				id: 10,
 				name: "Kardai (Safflower) Oil",
-				imageUrl: KardaiOil,
+				imageUrl: "https://i.ibb.co/880spJS/Kardi-Oil.png",
 				price: 200,
 			},
 		],
@@ -94,13 +74,13 @@ const SHOP_DATA = [
 			{
 				id: 11,
 				name: "Almond and Walnut Scrub",
-				imageUrl: AlmondWalnutScrub,
+				imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
 				price: 40,
 			},
 			{
 				id: 12,
 				name: "Coconut Scrub",
-				imageUrl: AlmondWalnutScrub,
+				imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
 				price: 30,
 			},
 		],
@@ -113,19 +93,19 @@ const SHOP_DATA = [
 			{
 				id: 13,
 				name: "Almond Flour",
-				imageUrl: AlmondFlour,
+				imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
 				price: 35,
 			},
 			{
 				id: 14,
 				name: "Coconut Flour",
-				imageUrl: CoconutFlour,
+				imageUrl: "https://i.ibb.co/bX6s51n/Coconut-Flour.jpg",
 				price: 25,
 			},
 			{
 				id: 15,
 				name: "Flaxseed Flour",
-				imageUrl: FlaxseedFlour,
+				imageUrl: "https://i.ibb.co/p45fT9B/Flaxseed-Flour.jpg",
 				price: 25,
 			},
 		],
@@ -138,31 +118,31 @@ const SHOP_DATA = [
 			{
 				id: 16,
 				name: "Awala Ginger",
-				imageUrl: AwalaGinger,
+				imageUrl: "https://i.ibb.co/5Mj06jn/Awala-Ginger.jpg",
 				price: 25,
 			},
 			{
 				id: 17,
 				name: "Jaggery Powder",
-				imageUrl: JaggeryPowder,
+				imageUrl: "https://i.ibb.co/SQLqvkK/Jaggery-Powder.jpg",
 				price: 55,
 			},
 			{
 				id: 18,
 				name: "Raw Sesame Seeds",
-				imageUrl: RawSesameSeed,
+				imageUrl: "https://i.ibb.co/yWfN41n/Raw-Sesame-Seed.jpg",
 				price: 80,
 			},
 			{
 				id: 19,
 				name: "Roasted Flax Seed Turmeric",
-				imageUrl: RoastedFlaxseedTurmeric,
+				imageUrl: "https://i.ibb.co/CHb8rhf/Roasted-Flaxseed-Turmeric.jpg",
 				price: 45,
 			},
 			{
 				id: 20,
 				name: "Rock Salt",
-				imageUrl: RockSalt,
+				imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
 				price: 50,
 			},
 		],

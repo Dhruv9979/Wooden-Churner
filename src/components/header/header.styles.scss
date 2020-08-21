@@ -1,9 +1,14 @@
 .header {
-    height: 70px;
+    height: 150px;
     width: 100%;
+    background: #fefeb3;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   
     .logo-container {
       height: 100%;

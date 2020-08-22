@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-	{
+const SHOP_DATA = {
+	oils: {
 		id: 1,
 		title: "Oils",
 		routeName: "oils",
@@ -66,7 +66,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	scrubs: {
 		id: 2,
 		title: "Scrubs",
 		routeName: "scrubs",
@@ -85,7 +85,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	flours: {
 		id: 3,
 		title: "Flours",
 		routeName: "flours",
@@ -110,7 +110,7 @@ const SHOP_DATA = [
 			},
 		],
 	},
-	{
+	other: {
 		id: 4,
 		title: "Other",
 		routeName: "other",
@@ -147,6 +147,6 @@ const SHOP_DATA = [
 			},
 		],
 	},
-];
+};
 
 export default SHOP_DATA;

@@ -8,12 +8,25 @@ import { addItem } from "../../redux/cart/cart.actions";
 
 import "./collection-item.styles.scss";
 
-const CollectionItem = ({ item, addItem, match }) => {
-	const { name, price, imageUrl, routeName } = item;
+//Check for routeName.
+// If yes, check for type. If no then match.url.
+//If yes for type then add type to route. If no, then match.url/routeName
+// routeName ? (type ? `${match.url}/${type}/${routeName}` : `${match.url}/${routeName}`) : `${match.url}`
+
+
+const CollectionItem = ({ item, addItem, match, history }) => {
+	const { name, price, imageUrl, routeName, type } = item;
+	
+	const routingProducts = routeName
+		? match.url.indexOf(type) > -1
+			? `${match.url}/${routeName}`
+			: `${match.url}/${type}/${routeName}`
+		: `${match.url}`;
+
 	return (
 		<div className="collection-item">
 			<Link
-				to={routeName ? `${match.url}/${routeName}` : `${match.url}`}
+				to={routingProducts}
 				className="image"
 				style={{
 					backgroundImage: `url(${imageUrl})`,
@@ -23,9 +36,13 @@ const CollectionItem = ({ item, addItem, match }) => {
 				<span className="name">{name}</span>
 				<span className="price">&#x20B9;{price}</span>
 			</div>
-			<CustomButton inverted onClick={() => addItem(item)}>
-				ADD TO CART
-			</CustomButton>
+			{routeName ? (
+				""
+			) : (
+				<CustomButton inverted onClick={() => addItem(item)}>
+					ADD TO CART
+				</CustomButton>
+			)}
 		</div>
 	);
 };

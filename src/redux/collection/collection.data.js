@@ -329,6 +329,156 @@ const PRODUCT_DATA = {
 			},
 		],
 	},
+	almondflour: {
+		id: 13,
+		name: "Almond Flour",
+		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
+		price: 35,
+		routeName: "almondflour",
+		products: [
+			{
+				id: 38,
+				name: "Almond Flour: 200 grams",
+				imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
+				price: 35,
+			},
+			{
+				id: 39,
+				name: "Almond Flour: 500 grams",
+				imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
+				price: 75,
+			},
+		],
+	},
+	coconutflour: {
+		id: 14,
+		name: "Coconut Flour",
+		imageUrl: "https://i.ibb.co/bX6s51n/Coconut-Flour.jpg",
+		price: 25,
+		routeName: "coconutflour",
+		products: [
+			{
+				id: 40,
+				name: "Coconut Flour: 200 grams",
+				imageUrl: "https://i.ibb.co/bX6s51n/Coconut-Flour.jpg",
+				price: 25,
+			},
+		],
+	},
+	flaxseedflour: {
+		id: 15,
+		name: "Flaxseed Flour",
+		imageUrl: "https://i.ibb.co/p45fT9B/Flaxseed-Flour.jpg",
+		price: 25,
+		routeName: "flaxseedflour",
+		products: [
+			{
+				id: 41,
+				name: "Flaxseed Flour: 200 grams",
+				imageUrl: "https://i.ibb.co/p45fT9B/Flaxseed-Flour.jpg",
+				price: 25,
+			},
+		],
+	},
+	awalaginger: {
+		id: 16,
+		name: "Awala Ginger",
+		imageUrl: "https://i.ibb.co/5Mj06jn/Awala-Ginger.jpg",
+		price: 75,
+		routeName: "awalaginger",
+		products: [
+			{
+				id: 42,
+				name: "Awala Ginger: 100 grams",
+				imageUrl: "https://i.ibb.co/5Mj06jn/Awala-Ginger.jpg",
+				price: 75,
+			},
+		],
+	},
+	jaggerypowder: {
+		id: 17,
+		name: "Jaggery Powder",
+		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
+		price: 55,
+		routeName: "jaggerypowder",
+		products: [
+			{
+				id: 43,
+				name: "Jaggery Powder: 500 grams",
+				imageUrl: "https://i.ibb.co/SQLqvkK/Jaggery-Powder.jpg",
+				price: 55,
+			},
+			{
+				id: 44,
+				name: "Jaggery Powder: 700 grams",
+				imageUrl: "https://i.ibb.co/SQLqvkK/Jaggery-Powder.jpg",
+				price: 80,
+			},
+		],
+	},
+	rawsesameseeds: {
+		id: 18,
+		name: "Raw Sesame Seeds",
+		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
+		price: 30,
+		routeName: "rawsesameseeds",
+		products: [
+			{
+				id: 45,
+				name: "Raw Sesame Seeds: 100 grams",
+				imageUrl: "https://i.ibb.co/yWfN41n/Raw-Sesame-Seed.jpg",
+				price: 30,
+			},
+			{
+				id: 46,
+				name: "Raw Sesame Seeds: 200 grams",
+				imageUrl: "https://i.ibb.co/yWfN41n/Raw-Sesame-Seed.jpg",
+				price: 60,
+			},
+			{
+				id: 47,
+				name: "Raw Sesame Seeds: 500 grams",
+				imageUrl: "https://i.ibb.co/yWfN41n/Raw-Sesame-Seed.jpg",
+				price: 120,
+			},
+		],
+	},
+	roastedflaxseedturmeric: {
+		id: 19,
+		name: "Roasted Flax Seed Turmeric",
+		imageUrl: "https://i.ibb.co/CHb8rhf/Roasted-Flaxseed-Turmeric.jpg",
+		price: 65,
+		routeName: "roastedflaxseedturmeric",
+		products: [
+			{
+				id: 48,
+				name: "Roasted Flax Seed Turmeric: 100 grams",
+				imageUrl: "https://i.ibb.co/CHb8rhf/Roasted-Flaxseed-Turmeric.jpg",
+				price: 65,
+			},
+		],
+	},
+	rocksalt: {
+		id: 20,
+		name: "Rock Salt (Saindhav)",
+		imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
+		price: 50,
+		routeName: "rocksalt",
+		products: [
+			{
+				id: 49,
+				name: "Rock Salt: 500 grams",
+				imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
+				price: 50,
+			},
+			{
+				id: 50,
+				name: "Rock Salt: 1 Kilogram",
+				imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
+				price: 90,
+			},
+		],
+	},
 };
 
 export default PRODUCT_DATA;

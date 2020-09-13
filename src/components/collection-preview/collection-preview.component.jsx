@@ -6,9 +6,11 @@ import CollectionItem from '../collection-item/collection-item.component';
 
 const CollectionPreview = ({ title, items }) => (
 	<div className='collection-preview'>
+	{/* <Link to=`/${title}> */}
 	    <div className="title">
 			<h1>{title.toUpperCase()}</h1>
 		</div>
+		{/* </Link> */}
 	    <div className="preview">
 	        {items
 	            .filter((item, index) => index < 4 )

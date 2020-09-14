@@ -4,8 +4,8 @@ import { Route } from "react-router-dom";
 import "./shop.styles.scss";
 
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
-import CollectionPage from '../collection/collection.component';
-import ProductPage from '../product/product.component';
+import CollectionPage from "../collection/collection.component";
+import ProductPage from "../product/product.component";
 import ProductInformation from "../../components/product-information/product-information.component";
 
 const ShopPage = ({ match }) => (

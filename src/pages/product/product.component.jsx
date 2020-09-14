@@ -13,7 +13,7 @@ const ProductPage = ({items}) => {
     return (
 		<div className="product-page">
 			<h2 className="title">{name}</h2>
-			<ProductInformation />
+			<ProductInformation items = {items} />
 			<div className="products">
 				{products.map((product) => (
 					<CollectionItem key={product.id} item={product} />

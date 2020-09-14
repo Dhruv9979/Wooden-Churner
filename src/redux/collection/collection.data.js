@@ -5,6 +5,7 @@ const PRODUCT_DATA = {
 		imageUrl: "https://i.ibb.co/bRYN3Bx/Almond-Oil.png",
 		price: 130,
 		routeName: "almondoil",
+		description: "Almond Oil",
 		products: [
 			{
 				id: 1,

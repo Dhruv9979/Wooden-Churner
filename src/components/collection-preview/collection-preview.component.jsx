@@ -5,6 +5,23 @@ import { withRouter } from "react-router-dom";
 import "./collection-preview.styles.scss";
 
 import CollectionItem from "../collection-item/collection-item.component";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 4,
+	},
+	tablet: {
+		breakpoint: { max: 1024, min: 464 },
+		items: 3,
+	},
+	mobile: {
+		breakpoint: { max: 464, min: 0 },
+		items: 1,
+	},
+};
 
 const CollectionPreview = ({ title, routeName, items, history, match }) => (
 	<div className="collection-preview">
@@ -12,11 +29,11 @@ const CollectionPreview = ({ title, routeName, items, history, match }) => (
 			<h1>{title.toUpperCase()}</h1>
 		</div>
 		<div className="preview">
-			{items
-				.filter((item, index) => index < 4)
-				.map((item) => (
+			<Carousel responsive={responsive}>
+				{items.map((item) => (
 					<CollectionItem key={item.id} item={item} />
 				))}
+			</Carousel>
 		</div>
 	</div>
 );

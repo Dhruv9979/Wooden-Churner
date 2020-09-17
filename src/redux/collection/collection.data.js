@@ -1,3 +1,5 @@
+import ProductInformation from './product-description';
+
 const PRODUCT_DATA = {
 	almondoil: {
 		id: 1,
@@ -5,7 +7,7 @@ const PRODUCT_DATA = {
 		imageUrl: "https://i.ibb.co/bRYN3Bx/Almond-Oil.png",
 		price: 130,
 		routeName: "almondoil",
-		description: "Almond Oil",
+		description: ProductInformation.ALMOND_OIL,
 		products: [
 			{
 				id: 1,

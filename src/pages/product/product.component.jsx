@@ -6,20 +6,27 @@ import ProductInformation  from '../../components/product-information/product-in
 
 import { selectProduct } from "../../redux/collection/collection.selectors";
 
-import './product.styles.scss'
+import {
+	ProductPageContainer,
+	ProductTitle,
+	ProductItemsContainer,
+} from "./product.styles";
 
 const ProductPage = ({items}) => {
-	const { name, products } = items;
+	const { name, products, description } = items;
     return (
-		<div className="product-page">
-			<h2 className="title">{name}</h2>
-			<ProductInformation items = {items} />
-			<div className="products">
+		<ProductPageContainer>
+			<ProductTitle>{name}</ProductTitle>
+			{/* {Object.entries(description).map(([key, val]) => 
+				<ProductInformation h2 = {h2} p = {val.p} li = {val.li} />
+			)} */}
+			<ProductInformation description={description} />
+			<ProductItemsContainer>
 				{products.map((product) => (
 					<CollectionItem key={product.id} item={product} />
 				))}
-			</div>
-		</div>
+			</ProductItemsContainer>
+		</ProductPageContainer>
 	);
 };
 

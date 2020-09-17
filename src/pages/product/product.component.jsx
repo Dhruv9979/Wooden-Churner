@@ -20,7 +20,7 @@ const ProductPage = ({items}) => {
 			{/* {Object.entries(description).map(([key, val]) => 
 				<ProductInformation h2 = {h2} p = {val.p} li = {val.li} />
 			)} */}
-			<ProductInformation description={description} />
+			{/* <ProductInformation description={description} /> */}
 			<ProductItemsContainer>
 				{products.map((product) => (
 					<CollectionItem key={product.id} item={product} />

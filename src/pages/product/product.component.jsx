@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item.component";
-import ProductInformation  from '../../components/product-information/product-information.component';
+// import ProductInformation  from '../../components/product-information/product-information.component';
 
 import { selectProduct } from "../../redux/collection/collection.selectors";
 
@@ -13,7 +13,7 @@ import {
 } from "./product.styles";
 
 const ProductPage = ({items}) => {
-	const { name, products, description } = items;
+	const { name, products } = items;
     return (
 		<ProductPageContainer>
 			<ProductTitle>{name}</ProductTitle>

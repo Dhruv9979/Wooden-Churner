@@ -1,13 +1,10 @@
-import ProductInformation from './product-description';
+// import ProductInformation from './product-description';
 
 const PRODUCT_DATA = {
 	almondoil: {
 		id: 1,
 		name: "Almond Oil",
-		imageUrl: "https://i.ibb.co/bRYN3Bx/Almond-Oil.png",
-		price: 130,
-		routeName: "almondoil",
-		description: ProductInformation.ALMOND_OIL,
+		description: "Almond Oil",
 		products: [
 			{
 				id: 1,
@@ -50,9 +47,6 @@ const PRODUCT_DATA = {
 	walnutoil: {
 		id: 2,
 		name: "Walnut Oil",
-		imageUrl: "https://i.ibb.co/mG3cFn6/Walnut-Oil.jpg",
-		price: 130,
-		routeName: "walnutoil",
 		description: "Walnut Oil",
 		products: [
 			{
@@ -96,9 +90,6 @@ const PRODUCT_DATA = {
 	groundnutoil: {
 		id: 3,
 		name: "Groundnut Oil",
-		imageUrl: "https://i.ibb.co/8z8DvY6/Groundnut-Oil.jpg",
-		price: 190,
-		routeName: "groundnutoil",
 		description: "Ground Oil",
 		products: [
 			{
@@ -124,9 +115,6 @@ const PRODUCT_DATA = {
 	mustardoil: {
 		id: 4,
 		name: "Mustard Oil",
-		imageUrl: "https://i.ibb.co/c1bkZPh/Mustard-Oil.png",
-		price: 80,
-		routeName: "mustardoil",
 		description: "Mustard Oil",
 		products: [
 			{
@@ -152,9 +140,6 @@ const PRODUCT_DATA = {
 	coconutoil: {
 		id: 5,
 		name: "Coconut Oil",
-		imageUrl: "https://i.ibb.co/cb17y30/Coconut-Oil.png",
-		price: 110,
-		routeName: "coconutoil",
 		description: "Coconut Oil",
 		products: [
 			{
@@ -186,9 +171,6 @@ const PRODUCT_DATA = {
 	flaxseedoil: {
 		id: 6,
 		name: "Flaxseed Oil",
-		imageUrl: "https://i.ibb.co/Xz8MgDY/Flaxseed-Oil.png",
-		price: 120,
-		routeName: "flaxseedoil",
 		description: "Flaxseed Oil",
 		products: [
 			{
@@ -208,9 +190,6 @@ const PRODUCT_DATA = {
 	blacktiloil: {
 		id: 7,
 		name: "Black Til (Sesame) Oil",
-		imageUrl: "https://i.ibb.co/GTW0BDQ/Black-Sesame-Oil.png",
-		price: 120,
-		routeName: "blacktiloil",
 		description: "Black Til Oil",
 		products: [
 			{
@@ -224,9 +203,6 @@ const PRODUCT_DATA = {
 	whitetiloil: {
 		id: 8,
 		name: "White Til (Sesame) Oil",
-		imageUrl: "https://i.ibb.co/CQMmWwH/White-Sesame-Oil.png",
-		price: 110,
-		routeName: "whitetiloil",
 		description: "White Til Oil",
 		products: [
 			{
@@ -264,9 +240,6 @@ const PRODUCT_DATA = {
 	divatiloil: {
 		id: 9,
 		name: "Diva Til Oil",
-		imageUrl: "https://i.ibb.co/VLPzqLL/Diva-Til-Oil.jpg",
-		price: 95,
-		routeName: "divatiloil",
 		description: "Diva Til Oil",
 		products: [
 			{
@@ -286,9 +259,6 @@ const PRODUCT_DATA = {
 	kardaioil: {
 		id: 10,
 		name: "Kardai (Safflower) Oil",
-		imageUrl: "https://i.ibb.co/880spJS/Kardi-Oil.png",
-		price: 200,
-		routeName: "kardaioil",
 		description: "Kardai Oil",
 		products: [
 			{
@@ -314,9 +284,6 @@ const PRODUCT_DATA = {
 	almondandwalnutscrub: {
 		id: 11,
 		name: "Almond and Walnut Scrub",
-		imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
-		price: 40,
-		routeName: "almondandwalnutscrub",
 		description: "Almond and Walnut Scrub",
 		products: [
 			{
@@ -330,9 +297,6 @@ const PRODUCT_DATA = {
 	coconutscrub: {
 		id: 12,
 		name: "Coconut Scrub",
-		imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
-		price: 30,
-		routeName: "coconutscrub",
 		description: "Coconut Scrub",
 		products: [
 			{
@@ -346,9 +310,6 @@ const PRODUCT_DATA = {
 	almondflour: {
 		id: 13,
 		name: "Almond Flour",
-		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
-		price: 35,
-		routeName: "almondflour",
 		description: "Almond Flour",
 		products: [
 			{
@@ -368,9 +329,6 @@ const PRODUCT_DATA = {
 	coconutflour: {
 		id: 14,
 		name: "Coconut Flour",
-		imageUrl: "https://i.ibb.co/bX6s51n/Coconut-Flour.jpg",
-		price: 25,
-		routeName: "coconutflour",
 		description: "Coconut Flour",
 		products: [
 			{
@@ -384,9 +342,6 @@ const PRODUCT_DATA = {
 	flaxseedflour: {
 		id: 15,
 		name: "Flaxseed Flour",
-		imageUrl: "https://i.ibb.co/p45fT9B/Flaxseed-Flour.jpg",
-		price: 25,
-		routeName: "flaxseedflour",
 		description: "Flaxseed Flour",
 		products: [
 			{
@@ -400,9 +355,6 @@ const PRODUCT_DATA = {
 	awalaginger: {
 		id: 16,
 		name: "Awala Ginger",
-		imageUrl: "https://i.ibb.co/5Mj06jn/Awala-Ginger.jpg",
-		price: 75,
-		routeName: "awalaginger",
 		description: "Awala Ginger",
 		products: [
 			{
@@ -416,9 +368,6 @@ const PRODUCT_DATA = {
 	jaggerypowder: {
 		id: 17,
 		name: "Jaggery Powder",
-		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
-		price: 55,
-		routeName: "jaggerypowder",
 		description: "Jaggery Powder",
 		products: [
 			{
@@ -438,9 +387,6 @@ const PRODUCT_DATA = {
 	rawsesameseeds: {
 		id: 18,
 		name: "Raw Sesame Seeds",
-		imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
-		price: 30,
-		routeName: "rawsesameseeds",
 		description: "Raw Sesame Seeds",
 		products: [
 			{
@@ -466,9 +412,6 @@ const PRODUCT_DATA = {
 	roastedflaxseedturmeric: {
 		id: 19,
 		name: "Roasted Flax Seed Turmeric",
-		imageUrl: "https://i.ibb.co/CHb8rhf/Roasted-Flaxseed-Turmeric.jpg",
-		price: 65,
-		routeName: "roastedflaxseedturmeric",
 		description: "Roasted Flaxseed Turmeric",
 		products: [
 			{
@@ -482,9 +425,6 @@ const PRODUCT_DATA = {
 	rocksalt: {
 		id: 20,
 		name: "Rock Salt (Saindhav)",
-		imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
-		price: 50,
-		routeName: "rocksalt",
 		description: "Rock Salt",
 		products: [
 			{

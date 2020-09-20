@@ -9,7 +9,7 @@ const SHOP_DATA = {
 				name: "Almond Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/bRYN3Bx/Almond-Oil.png",
-				price: 130,
+				price: "130 - 2600",
 				routeName: "almondoil",
 			},
 			{
@@ -17,7 +17,7 @@ const SHOP_DATA = {
 				name: "Walnut Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/mG3cFn6/Walnut-Oil.jpg",
-				price: 130,
+				price: "130 - 2600",
 				routeName: "walnutoil",
 			},
 			{
@@ -25,7 +25,7 @@ const SHOP_DATA = {
 				name: "Groundnut Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/8z8DvY6/Groundnut-Oil.jpg",
-				price: 190,
+				price: "190 - 2300",
 				routeName: "groundnutoil",
 			},
 			{
@@ -33,7 +33,7 @@ const SHOP_DATA = {
 				name: "Mustard Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/c1bkZPh/Mustard-Oil.png",
-				price: 80,
+				price: "80 - 190",
 				routeName: "mustardoil",
 			},
 			{
@@ -41,7 +41,7 @@ const SHOP_DATA = {
 				name: "Coconut Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/cb17y30/Coconut-Oil.png",
-				price: 110,
+				price: "110 - 1525",
 				routeName: "coconutoil",
 			},
 			{
@@ -49,7 +49,7 @@ const SHOP_DATA = {
 				name: "Flaxseed Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/Xz8MgDY/Flaxseed-Oil.png",
-				price: 120,
+				price: "120 - 200",
 				routeName: "flaxseedoil",
 			},
 			{
@@ -57,7 +57,7 @@ const SHOP_DATA = {
 				name: "Black Til (Sesame) Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/GTW0BDQ/Black-Sesame-Oil.png",
-				price: 120,
+				price: "120",
 				routeName: "blacktiloil",
 			},
 			{
@@ -65,7 +65,7 @@ const SHOP_DATA = {
 				name: "White Til (Sesame) Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/CQMmWwH/White-Sesame-Oil.png",
-				price: 110,
+				price: "110 - 3520",
 				routeName: "whitetiloil",
 			},
 			{
@@ -73,7 +73,7 @@ const SHOP_DATA = {
 				name: "Diva Til Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/VLPzqLL/Diva-Til-Oil.jpg",
-				price: 95,
+				price: "95 - 180",
 				routeName: "divatiloil",
 			},
 			{
@@ -81,7 +81,7 @@ const SHOP_DATA = {
 				name: "Kardai (Safflower) Oil",
 				type: "oils",
 				imageUrl: "https://i.ibb.co/880spJS/Kardi-Oil.png",
-				price: 200,
+				price: "200 - 2350",
 				routeName: "kardaioil",
 			},
 		],
@@ -96,7 +96,7 @@ const SHOP_DATA = {
 				name: "Almond and Walnut Scrub",
 				type: "scrubs",
 				imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
-				price: 40,
+				price: "40",
 				routeName: "almondandwalnutscrub",
 			},
 			{
@@ -104,7 +104,7 @@ const SHOP_DATA = {
 				name: "Coconut Scrub",
 				type: "scrubs",
 				imageUrl: "https://i.ibb.co/0MYw2Ms/Almond-Walnut-Scrub.jpg",
-				price: 30,
+				price: "30",
 				routeName: "coconutscrub",
 			},
 		],
@@ -119,7 +119,7 @@ const SHOP_DATA = {
 				name: "Almond Flour",
 				type: "flours",
 				imageUrl: "https://i.ibb.co/jHbfZH1/Almond-Flour.jpg",
-				price: 35,
+				price: "35 - 75",
 				routeName: "almondflour",
 			},
 			{
@@ -127,7 +127,7 @@ const SHOP_DATA = {
 				name: "Coconut Flour",
 				type: "flours",
 				imageUrl: "https://i.ibb.co/bX6s51n/Coconut-Flour.jpg",
-				price: 25,
+				price: "25",
 				routeName: "coconutflour",
 			},
 			{
@@ -135,7 +135,7 @@ const SHOP_DATA = {
 				name: "Flaxseed Flour",
 				type: "flours",
 				imageUrl: "https://i.ibb.co/p45fT9B/Flaxseed-Flour.jpg",
-				price: 25,
+				price: "25",
 				routeName: "flaxseedflour",
 			},
 		],
@@ -150,7 +150,7 @@ const SHOP_DATA = {
 				name: "Awala Ginger",
 				type: "other",
 				imageUrl: "https://i.ibb.co/5Mj06jn/Awala-Ginger.jpg",
-				price: 25,
+				price: "75",
 				routeName: "awalaginger",
 			},
 			{
@@ -158,7 +158,7 @@ const SHOP_DATA = {
 				name: "Jaggery Powder",
 				type: "other",
 				imageUrl: "https://i.ibb.co/SQLqvkK/Jaggery-Powder.jpg",
-				price: 55,
+				price: "55 - 80",
 				routeName: "jaggerypowder",
 			},
 			{
@@ -166,7 +166,7 @@ const SHOP_DATA = {
 				name: "Raw Sesame Seeds",
 				type: "other",
 				imageUrl: "https://i.ibb.co/yWfN41n/Raw-Sesame-Seed.jpg",
-				price: 30,
+				price: "30 - 120",
 				routeName: "rawsesameseeds",
 			},
 			{
@@ -174,7 +174,7 @@ const SHOP_DATA = {
 				name: "Roasted Flax Seed Turmeric",
 				type: "other",
 				imageUrl: "https://i.ibb.co/CHb8rhf/Roasted-Flaxseed-Turmeric.jpg",
-				price: 65,
+				price: "65",
 				routeName: "roastedflaxseedturmeric",
 			},
 			{
@@ -182,7 +182,7 @@ const SHOP_DATA = {
 				name: "Rock Salt (Saindhav)",
 				type: "other",
 				imageUrl: "https://i.ibb.co/xH2k4ks/Rock-Salt.jpg",
-				price: 50,
+				price: "50 - 90",
 				routeName: "rocksalt",
 			},
 		],

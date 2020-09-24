@@ -33,8 +33,11 @@ const CollectionPreview = ({ title, routeName, items, history, match }) => (
 		</TitleContainer>
 		<PreviewContainer>
 			<Carousel responsive={responsive}>
-				{items.map((item) => (
+				{/* {items.map((item) => (
 					<CollectionItem key={item.id} item={item} />
+				))} */}
+				{Object.entries(items).map(([key,val]) => (
+				<CollectionItem key={val.id} item={val} />
 				))}
 			</Carousel>
 		</PreviewContainer>

@@ -16,7 +16,6 @@ import {
 
 const CollectionItem = ({ item, addItem, match, history }) => {
 	const { name, price, imageUrl, routeName, type } = item;
-	
 	const routingProducts = routeName
 		? match.url.indexOf(type) > -1
 			? `${match.url}/${routeName}`

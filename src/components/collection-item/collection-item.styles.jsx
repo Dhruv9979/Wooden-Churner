@@ -30,7 +30,7 @@ export const AddButton = styled(CustomButton)`
 
 export const BackgroundImage = styled(Link)`
 	width: 100%;
-	height: 93%;
+	height: 90%;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -40,10 +40,11 @@ export const BackgroundImage = styled(Link)`
 
 export const CollectionFooterContainer = styled.div`
 	width: 100%;
-	height: 7%;
+	height: 10%;
 	display: flex;
 	justify-content: space-between;
-	font-size: 18px;
+	padding: 0 45px;
+	font-size: 15px;
 `;
 
 export const NameContainer = styled.span`

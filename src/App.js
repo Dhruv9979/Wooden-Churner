@@ -15,6 +15,7 @@ import Footer from "./components/footer/footer.component";
 
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { checkUserSession } from "./redux/user/user.actions";
+import ContactPage from "./pages/contact/contact.component";
 class App extends React.Component {
 	unsubscribeFromAuth = null;
 
@@ -42,6 +43,7 @@ class App extends React.Component {
 							this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
 						}
 					/>
+					<Route exact path="/contact" component={ContactPage} />
 				</Switch>
 				<Footer />
 			</div>

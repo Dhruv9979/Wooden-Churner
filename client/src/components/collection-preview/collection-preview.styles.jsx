@@ -16,6 +16,12 @@ export const TitleContainer = styled.h1`
 `;
 
 export const PreviewContainer = styled.div`
-	${'' /* display: flex;
+	${"" /* display: flex;
 	justify-content: space-between; */}
+
+	@media screen and (max-width: 800px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+	}
 `;

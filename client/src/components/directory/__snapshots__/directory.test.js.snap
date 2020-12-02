@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Directory component 1`] = `
+<styled.div>
+  <withRouter(MenuItem)
+    imageUrl="https://i.ibb.co/VHxdgVx/Peanuts-in-wooden-bowl-in-different-shapes-like-heart-square-eclipse-with-peanut-oil.jpg"
+    key="1"
+    linkUrl="shop/oils"
+    title="oils"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://i.ibb.co/Y33jXDH/walnut-body-scrub-beauty-treatment.jpg"
+    key="2"
+    linkUrl="shop/scrubs"
+    title="scrubs"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://i.ibb.co/HFnpzcZ/Two-bowls-containing-almonds-and-almond-flour-for-food-processing-concept.jpg"
+    key="3"
+    linkUrl="shop/flours"
+    title="flours"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://i.ibb.co/cJMG18L/Other-Banner.jpg"
+    key="4"
+    linkUrl="shop/other"
+    size="large"
+    title="other"
+  />
+  <withRouter(MenuItem)
+    imageUrl="https://i.ibb.co/DpqDbCh/Almond-and-oil-in-bottles-on-brown-wooden-table.jpg"
+    key="5"
+    linkUrl="shop"
+    size="large"
+    title="all"
+  />
+</styled.div>
+`;

@@ -26,18 +26,15 @@ const responsive = {
 	},
 };
 
-const CollectionPreview = ({ title, routeName, items, history, match }) => (
+export const CollectionPreview = ({ title, routeName, items, history, match }) => (
 	<CollectionPreviewContainer>
 		<TitleContainer onClick={() => history.push(`${match.url}/${routeName}`)}>
 			<h1>{title.toUpperCase()}</h1>
 		</TitleContainer>
 		<PreviewContainer>
 			<Carousel responsive={responsive}>
-				{/* {items.map((item) => (
-					<CollectionItem key={item.id} item={item} />
-				))} */}
 				{Object.entries(items).map(([key,val]) => (
-				<CollectionItem key={val.id} item={val} />
+					<CollectionItem key={val.id} item={val} />
 				))}
 			</Carousel>
 		</PreviewContainer>

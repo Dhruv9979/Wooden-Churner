@@ -1,7 +1,7 @@
 import React from "react";
 import { FooterContainer, VegetarianImg } from "./footer.styles";
 
-function Footer() {
+export const Footer = () => {
 	return (
 		<FooterContainer>
 			All our products are pure vegetarian

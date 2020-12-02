@@ -5,7 +5,7 @@ import SignUp from "../../components/sign-up/sign-up.component";
 
 import { SignInAndSignUpContainer } from "./sign-in-and-sign-up.styles";
 
-const SignInAndSignUpPage = () => (
+export const SignInAndSignUpPage = () => (
 	<SignInAndSignUpContainer>
 		<SignIn />
 		<SignUp />

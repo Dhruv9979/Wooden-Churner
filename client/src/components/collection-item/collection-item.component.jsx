@@ -14,7 +14,7 @@ import {
 } from "./collection-item.styles";
 
 
-const CollectionItem = ({ item, addItem, match, history }) => {
+export const CollectionItem = ({ item, addItem, match, history }) => {
 	const { name, price, imageUrl, routeName, type } = item;
 	const routingProducts = routeName
 		? match.url.indexOf(type) > -1

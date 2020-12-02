@@ -12,7 +12,7 @@ import {
 	ProductItemsContainer,
 } from "./product.styles";
 
-const ProductPage = ({ items }) => {
+export const ProductPage = ({ items }) => {
 	const { name, products } = items;
 	return (
 		<ProductPageContainer>

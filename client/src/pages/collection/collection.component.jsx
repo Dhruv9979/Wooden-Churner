@@ -11,19 +11,16 @@ import {
 	CollectionItemsContainer,
 } from "./collection.styles";
 
-const CollectionPage = ({ collection }) => {
+export const CollectionPage = ({ collection }) => {
 	const { title, items } = collection;
+	const displayCollectionItems = Object.entries(items).map(([key, val]) => (
+		<CollectionItem key={val.id} item={val} />
+	));
 	return (
 		<CollectionPageContainer>
 			<CollectionTitle>{title}</CollectionTitle>
 			<CollectionItemsContainer>
-				{Object.entries(items).map(([key, val]) => (
-					<CollectionItem key={val.id} item={val} />
-				))}
-
-				{/* {items.map((item) => (
-					<CollectionItem key={item.id} item={item} />
-				))} */}
+				{displayCollectionItems}
 			</CollectionItemsContainer>
 		</CollectionPageContainer>
 	);

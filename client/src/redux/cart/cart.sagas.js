@@ -7,7 +7,7 @@ import { clearCart, setCartFromFirebase } from './cart.actions';
 import { selectCartItems } from './cart.selectors';
 import CartActionTypes from './cart.types';
 
-export function* clearCartOnSignOut() {
+export function* clearCartItems() {
     yield put(clearCart());
 }
 
@@ -30,8 +30,12 @@ export function* checkCartFromFirebase({ payload: user }) {
     yield put(setCartFromFirebase(cartSnapshot.data().cartItems));
 }
 
+export function* onCheckoutSuccess() {
+    yield takeLatest(CartActionTypes.CHECKOUT_SUCCESS, clearCartItems);
+}
+
 export function* onSignOutSuccess() {
-    yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut);
+    yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartItems);
 }
 
 export function* onUserSignIn() {
@@ -50,5 +54,5 @@ export function* onCartChange() {
 }
 
 export function* cartSagas() {
-    yield all([call(onSignOutSuccess), call(onCartChange), call(onUserSignIn)]);
+    yield all([call(onSignOutSuccess), call(onCartChange), call(onUserSignIn), call(onCheckoutSuccess)]);
 }

@@ -13,6 +13,7 @@ import Footer from "./components/footer/footer.component";
 
 import Spinner from "./components/spinner/spinner.component";
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
+import OrderPage from "./pages/orders/order.component";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
 const SignInAndSignUpPage = lazy(() =>
@@ -43,6 +44,7 @@ const App = ({ checkUserSession, currentUser }) => {
 						render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />)}
 					/>
 					<Route exact path="/contact" component={ContactPage} />
+					<Route exact path="/orders" component={OrderPage} />
 				</Suspense>
 				</ErrorBoundary>
 			</Switch>

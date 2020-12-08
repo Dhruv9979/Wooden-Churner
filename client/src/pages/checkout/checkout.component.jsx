@@ -6,6 +6,7 @@ import StripeCheckoutButton from "../../components/stripe-button/stripe-button.c
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
 import { selectCartItems, selectCartTotal } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from '../../redux/user/user.selectors'
 
 import {
 	CheckoutPageContainer,
@@ -15,7 +16,7 @@ import {
 	WarningContainer,
 } from "./checkout.styles";
 
-export const CheckoutPage = ({ cartItems, total }) => (
+export const CheckoutPage = ({ cartItems, user, total }) => (
 	<CheckoutPageContainer>
 		<CheckoutHeaderContainer>
 			<HeaderBlockContainer>
@@ -43,13 +44,14 @@ export const CheckoutPage = ({ cartItems, total }) => (
 			<br />
 			4242 4242 4242 4242 - Exp: 01/24 - CVV: 123
 		</WarningContainer>
-		<StripeCheckoutButton price={total} />
+		<StripeCheckoutButton price={total} cartItems = {cartItems} user={user} />
 	</CheckoutPageContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
 	cartItems: selectCartItems,
 	total: selectCartTotal,
+	user: selectCurrentUser
 });
 
 export default connect(mapStateToProps)(CheckoutPage);

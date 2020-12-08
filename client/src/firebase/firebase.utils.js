@@ -40,6 +40,23 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 };
 
+export const addOrdertoUser = async (user, cartItems, price, paymentId) => {
+    const createdAt = new Date();
+    firestore
+        .collection('users')
+        .doc(user?.id)
+        .collection('orders')
+        .doc(paymentId)
+        .set(
+            {
+                cartItems: cartItems,
+                amount: price,
+                createdAt: createdAt,
+            },
+            { merge: true }
+        );
+};
+
 export const getUserCartRef = async (userId) => {
     const cartsRef = firestore
         .collection('carts')

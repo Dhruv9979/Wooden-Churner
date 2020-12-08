@@ -24,6 +24,7 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
             <Logo className="logo" />
         </LogoContainer>
         <OptionsContainer>
+            <OptionLink to="/">HOME</OptionLink>
             <OptionLink to="/shop">ABOUT</OptionLink>
             <OptionLink to="/shop">SHOP</OptionLink>
             <OptionLink to="/contact">CONTACT</OptionLink>

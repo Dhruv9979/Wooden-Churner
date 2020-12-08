@@ -24,3 +24,16 @@ export const CollectionItemsContainer = styled.div`
 		grid-gap: 15px;
 	}
 `;
+
+export const OptionButton = styled.button`
+    padding: 10px 15px 50px;
+    width: 150px;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+	cursor: pointer;
+	outline:none;
+`;

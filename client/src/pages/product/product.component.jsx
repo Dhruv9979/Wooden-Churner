@@ -10,12 +10,16 @@ import {
 	ProductPageContainer,
 	ProductTitle,
 	ProductItemsContainer,
+	OptionButton
 } from "./product.styles";
 
-export const ProductPage = ({ items }) => {
+export const ProductPage = ({ items, history }) => {
+	console.log(history);
+
 	const { name, products } = items;
 	return (
 		<ProductPageContainer>
+			<OptionButton onClick={() => history.goBack()}>GO BACK</OptionButton>
 			<ProductTitle>{name}</ProductTitle>
 			{/* {Object.entries(description).map(([key, val]) => 
 				<ProductInformation h2 = {h2} p = {val.p} li = {val.li} />

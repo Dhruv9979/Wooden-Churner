@@ -35,3 +35,8 @@ export const setCartFromFirebase = (cartItems) => ({
 export const checkoutSuccess = () => ({
     type: CartActionTypes.CHECKOUT_SUCCESS,
 });
+
+export const buyAgain = (items) => ({
+    type: CartActionTypes.BUY_AGAIN,
+    payload: items,
+});

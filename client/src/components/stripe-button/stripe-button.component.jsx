@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import { addOrdertoUser } from '../../firebase/firebase.utils';
-import { checkoutSuccess } from "../../redux/cart/cart.actions";
-
+import { checkoutSuccess } from '../../redux/cart/cart.actions';
 
 const StripeCheckoutButton = ({ price, cartItems, user, checkoutSuccess }) => {
     const priceForStripe = price * 100;
@@ -51,6 +50,6 @@ const StripeCheckoutButton = ({ price, cartItems, user, checkoutSuccess }) => {
 
 const mapDispatchToProps = (dispatch) => ({
     checkoutSuccess: () => dispatch(checkoutSuccess()),
-  });
-  
+});
+
 export default connect(null, mapDispatchToProps)(StripeCheckoutButton);

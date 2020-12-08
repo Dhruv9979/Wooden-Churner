@@ -4,6 +4,7 @@ import {
     addItemToCart,
     clearItemFromCart,
     removeItemFromCart,
+    placeSameOrder,
 } from './cart.utils';
 
 import CartActionTypes from './cart.types';
@@ -44,6 +45,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 cartItems: action.payload,
+            };
+        case CartActionTypes.BUY_AGAIN:
+            return {
+                ...state,
+                cartItems: placeSameOrder(state.cartItems, action.payload),
             };
         default:
             return state;

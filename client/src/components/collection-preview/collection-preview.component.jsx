@@ -29,7 +29,7 @@ const responsive = {
 export const CollectionPreview = ({ title, routeName, items, history, match }) => (
 	<CollectionPreviewContainer>
 		<TitleContainer onClick={() => history.push(`${match.url}/${routeName}`)}>
-			<h1>{title.toUpperCase()}</h1>
+			{title.toUpperCase()}
 		</TitleContainer>
 		<PreviewContainer>
 			<Carousel responsive={responsive}>

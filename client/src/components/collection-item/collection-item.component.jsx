@@ -15,7 +15,7 @@ import {
 } from './collection-item.styles';
 
 export const CollectionItem = ({ item, addItem, match, history }) => {
-	const { name, price, imageUrl, routeName, type, status } = item;
+	const { name, price, imageUrl, routeName, type, stock } = item;
 	const outOfStock = "Out Of Stock";
     const routingProducts = routeName
         ? match.url.indexOf(type) > -1
@@ -25,14 +25,14 @@ export const CollectionItem = ({ item, addItem, match, history }) => {
 
     const product = (
         <CollectionItemContainer>
-            {status === outOfStock ? (
+            {stock === outOfStock ? (
                 <BackgroundImage
                     to={routingProducts}
                     className="image"
 					imageUrl={imageUrl}
 					style={{ opacity: "0.3" }}
                 >
-                    <TextContainer>{status}</TextContainer>
+                    <TextContainer>{stock}</TextContainer>
                 </BackgroundImage>
             ) : (
                 <BackgroundImage
@@ -45,7 +45,7 @@ export const CollectionItem = ({ item, addItem, match, history }) => {
                 <NameContainer>{name}</NameContainer>
                 <PriceContainer>&#x20B9;{price}</PriceContainer>
             </CollectionFooterContainer>
-            {(routeName, status === outOfStock) ? (
+            {(routeName, stock === outOfStock) ? (
                 ''
             ) : (
                 <AddButton onClick={() => addItem(item)}>ADD TO CART</AddButton>

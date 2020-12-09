@@ -32,16 +32,6 @@ export const CollectionItemContainer = styled.div`
     }
 `;
 
-export const TextContainer = styled.div`
-	position: absolute;
-	z-index: 1;
-	font-size: 45px;
-	top: 30%;
-	left: 15%;
-	color: red;
-	transform: rotate(65deg);
-`;
-
 export const AddButton = styled(CustomButton)`
     width: 80%;
     opacity: 0.7;
@@ -66,10 +56,35 @@ export const BackgroundImage = styled(Link)`
     background-size: contain;
     background-position: center;
     margin-bottom: 5px;
+    position: relative;
     background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
 BackgroundImage.displayName = 'BackgroundImage';
+
+
+export const TextContainer = styled.div`
+	position: relative;
+	z-index: 1;
+    font-size: 35px;
+    text-transform: uppercase;
+	top: 50%;
+	left: 5%;
+	color: darkred;
+	transform: rotate(65deg);
+`;
+
+export const TestOpacity = styled.div`
+    position:absolute;  
+    top:0;  
+    bottom:0;
+    left:0;  
+    width:100%;  
+    background-color: #fff;
+    opacity: 0.8;
+`;
+
+TestOpacity.displayName = 'TestOpacity';
 
 export const CollectionFooterContainer = styled.div`
     width: 100%;

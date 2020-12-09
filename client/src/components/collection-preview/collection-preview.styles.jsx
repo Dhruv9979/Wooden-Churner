@@ -7,7 +7,7 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-	font-size: 44px;
+	font-size: 36px;
 	color: #762522;
 	margin-bottom: 25px;
 	h1:hover {

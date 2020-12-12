@@ -8,6 +8,7 @@ export const ProductPageContainer = styled.div`
 export const ProductTitle = styled.h2`
     font-size: 38px;
     margin: 0 auto 30px;
+    color: #762522;
 `;
 
 export const ProductItemsContainer = styled.div`
@@ -35,5 +36,7 @@ export const OptionButton = styled.button`
     font-size: 20px;
     margin: 4px 2px;
 	cursor: pointer;
-	outline:none;
+    outline:none;
+    color: #762522;
+    font-family: "Poppins", serif;
 `;

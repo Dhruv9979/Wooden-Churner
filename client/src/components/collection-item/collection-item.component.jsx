@@ -23,6 +23,8 @@ export const CollectionItem = ({ item, addItem, match, history }) => {
             ? `${match.url}/${routeName}`
             : `${match.url}/${type}/${routeName}`
         : `${match.url}`;
+        console.log(typeof price);
+    var rupees ='\u20B9'; 
 
     const product = (
         <CollectionItemContainer>
@@ -44,7 +46,7 @@ export const CollectionItem = ({ item, addItem, match, history }) => {
             )}
             <CollectionFooterContainer>
                 <NameContainer>{name}</NameContainer>
-                <PriceContainer>&#x20B9;{price}</PriceContainer>
+                { typeof (price) === 'number' &&<PriceContainer>{rupees} {price}</PriceContainer>}
             </CollectionFooterContainer>
             {routeName ? (
                 ''

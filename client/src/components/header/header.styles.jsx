@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 const OptionContainerStyles = css`
 	padding: 10px 15px;
 	cursor: pointer;
+	color: #762522;
 `;
 
 export const HeaderContainer = styled.div`
@@ -37,7 +38,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const OptionsContainer = styled.div`
-	width: 50%;
+	width: 55%;
 	height: 100%;
 	font-size: 22px;
 	display: flex;

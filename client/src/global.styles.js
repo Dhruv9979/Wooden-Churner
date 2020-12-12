@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'Lora', serif;
+        font-family: 'Poppins', serif;
         padding: 20px 40px;
 
         @media screen and (max-width: 800px) {

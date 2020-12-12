@@ -10,9 +10,7 @@ export const TitleContainer = styled.h1`
 	font-size: 36px;
 	color: #762522;
 	margin-bottom: 25px;
-	h1:hover {
-		cursor: pointer;
-	}
+	cursor: pointer;
 `;
 
 TitleContainer.displayName = "TitleContainer";

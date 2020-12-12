@@ -98,8 +98,9 @@ export const CollectionFooterContainer = styled.div`
 CollectionFooterContainer.displayName = 'CollectionFooterContainer';
 
 export const NameContainer = styled.span`
-    width: 75%;
+    width: 100%;
     margin-bottom: 15px;
+    text-align: center;
 `;
 
 NameContainer.displayName = 'NameContainer';

@@ -26,7 +26,7 @@ export const ProductPage = ({ items, history }) => {
                 />
                 GO BACK
             </OptionButton>
-            <ProductTitle>{name}</ProductTitle>
+            <ProductTitle>{name.toUpperCase()}</ProductTitle>
             {/* {Object.entries(description).map(([key, val]) => 
 				<ProductInformation h2 = {h2} p = {val.p} li = {val.li} />
 			)} */}

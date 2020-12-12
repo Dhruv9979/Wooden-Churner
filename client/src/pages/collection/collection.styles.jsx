@@ -8,6 +8,7 @@ export const CollectionPageContainer = styled.div`
 export const CollectionTitle = styled.h2`
 	font-size: 38px;
 	margin: 0 auto 30px;
+	color: #762522;
 `;
 
 export const CollectionItemsContainer = styled.div`
@@ -36,4 +37,6 @@ export const OptionButton = styled.button`
     margin: 4px 2px;
 	cursor: pointer;
 	outline:none;
+	color: #762522;
+	font-family: "Poppins", serif;
 `;

@@ -28,7 +28,7 @@ export const CollectionPage = ({ collection, history }) => {
                 />
                 GO BACK
             </OptionButton>
-            <CollectionTitle>{title}</CollectionTitle>
+            <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
             <CollectionItemsContainer>
                 {displayCollectionItems}
             </CollectionItemsContainer>

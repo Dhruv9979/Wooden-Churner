@@ -23,7 +23,6 @@ export const CollectionItem = ({ item, addItem, match, history }) => {
             ? `${match.url}/${routeName}`
             : `${match.url}/${type}/${routeName}`
         : `${match.url}`;
-        console.log(typeof price);
     var rupees ='\u20B9'; 
 
     const product = (

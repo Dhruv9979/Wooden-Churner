@@ -1,39 +1,40 @@
-import React from "react";
+import React from 'react';
 
-import {ProductInfoContainer} from "./product-information.styles";
+import { ProductInfoContainer } from './product-information.styles';
 
-const ProductInformation = ({ description }) => {
-	const { h2 } = description;
+const ProductInformation = ({ description, name }) => {
+    const { information, use } = description;
+    const { rich_way, benefits } = use || {};
 
-	return (
-		<ProductInfoContainer>
-			<h2>{h2}</h2>
-			{/* description.map((i) =>  */}
-			{/* description.map(( i ) => (
-			{ <p>
-					<strong>{i.p}</strong>
-				</p>
-				{i.li.map((j) => (
-					<li> {j} </li>
-				))}
-			 ) */}
-
-			{Object.entries(description).map(([key, val]) => (
-				<p>
-					<strong>{val.p}</strong>
-					<li>{val.li}</li>
-				</p>
-			))}
-
-			{/* <p>
-					<strong>{key1.p}</strong>
-				</p>
-				{key1.li.map((i) => (
-					<li> {i} </li>
-				))}
-			 */}
-		</ProductInfoContainer>
-	);
+    return (
+        <ProductInfoContainer>
+            <h2>Description</h2>
+            {rich_way && (
+                <p>
+                    <strong>A Rich way to use {name}</strong>
+                    {rich_way?.map((i) => (
+                        <li>{i}</li>
+                    ))}
+                </p>
+            )}
+            {benefits && (
+                <p>
+                    <strong>Benefits</strong>
+                    {benefits?.map((i) => (
+                        <li>{i}</li>
+                    ))}
+                </p>
+            )}
+            {information && (
+                <p>
+                    <strong>General Information</strong>
+                    {information?.map((i) => (
+                        <li>{i}</li>
+                    ))}
+                </p>
+            )}
+        </ProductInfoContainer>
+    );
 };
 
 export default ProductInformation;

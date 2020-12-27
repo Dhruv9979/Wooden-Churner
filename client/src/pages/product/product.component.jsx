@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import CollectionItem from '../../components/collection-item/collection-item.component';
-// import ProductInformation  from '../../components/product-information/product-information.component';
+import ProductInformation  from '../../components/product-information/product-information.component';
 
 import { selectProducts } from '../../redux/shop/shop.selectors';
 
@@ -16,7 +16,7 @@ import {
 } from './product.styles';
 
 export const ProductPage = ({ items, history }) => {
-    const { name, products } = items;
+    const { name, products, description } = items;
     return (
         <ProductPageContainer>
             <OptionButton onClick={() => history.goBack()}>
@@ -30,7 +30,7 @@ export const ProductPage = ({ items, history }) => {
             {/* {Object.entries(description).map(([key, val]) => 
 				<ProductInformation h2 = {h2} p = {val.p} li = {val.li} />
 			)} */}
-            {/* <ProductInformation description={description} /> */}
+            {description && <ProductInformation description={description} name={name} />}
             <ProductItemsContainer>
                 {Object.entries(products).map(([key, val]) => (
                     <CollectionItem key={val.id} item={val} />

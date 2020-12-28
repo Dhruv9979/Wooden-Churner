@@ -13,7 +13,9 @@ const ProductInformation = ({ description, name }) => {
                 <p>
                     <strong>A Rich way to use {name}</strong>
                     {rich_way?.map((i) => (
-                        <li>{i}</li>
+                        <li key={Math.random().toString(36).substring(7)}>
+                            {i}
+                        </li>
                     ))}
                 </p>
             )}
@@ -21,7 +23,9 @@ const ProductInformation = ({ description, name }) => {
                 <p>
                     <strong>Benefits</strong>
                     {benefits?.map((i) => (
-                        <li>{i}</li>
+                        <li key={Math.random().toString(36).substring(7)}>
+                            {i}
+                        </li>
                     ))}
                 </p>
             )}
@@ -29,7 +33,9 @@ const ProductInformation = ({ description, name }) => {
                 <p>
                     <strong>General Information</strong>
                     {information?.map((i) => (
-                        <li>{i}</li>
+                        <li key={Math.random().toString(36).substring(7)}>
+                            {i}
+                        </li>
                     ))}
                 </p>
             )}

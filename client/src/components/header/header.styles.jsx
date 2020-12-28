@@ -5,6 +5,13 @@ const OptionContainerStyles = css`
 	padding: 10px 15px;
 	cursor: pointer;
 	color: #762522;
+	display:flex;
+	align-items: center;
+	border-radius: 8px;
+	transition: background 500ms;
+	&:hover {
+		filter: brightness(2);
+	}
 `;
 
 export const HeaderContainer = styled.div`
@@ -37,7 +44,7 @@ export const LogoContainer = styled(Link)`
 	}
 `;
 
-export const OptionsContainer = styled.div`
+export const OptionsContainer = styled.nav`
 	width: 55%;
 	height: 100%;
 	font-size: 22px;
@@ -47,6 +54,63 @@ export const OptionsContainer = styled.div`
 
 	@media screen and (max-width: 800px) {
 		width: 80%;
+	}
+`;
+
+export const NavbarNav = styled.ul`
+	list-style: none;
+	display: flex;
+`;
+
+export const ListItem = styled.li`
+	width: 90px;
+`;
+
+export const IconButton = styled(Link)`
+	width: 60px;
+	height: 60px;
+	border: 2px solid #762522;
+	border-radius: 5px;
+	margin: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: filter 300ms;
+
+	&:hover {
+		filter: brightness(1.2);
+	}
+
+	svg {
+		fill: #762522;
+		width: 50px;
+  		height: 50px;
+	}
+`;
+
+export const Dropdown = styled.div`
+	position: absolute;
+	top: 100px;
+	width: 200px;
+	transform: translateX(-45%);
+	background-color: #fefeb3;
+	border: 1px solid #474a4d;
+	border-radius: 8px;
+	padding: 1rem;
+	overflow: hidden;
+	transition: height 500ms ease;
+`;
+
+export const MenuItem = styled(Link)`
+	height: 30px;
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	transition: background 500ms;
+	padding: 0.5rem;
+
+	&:hover {
+		background-color: #525357;
 	}
 `;
 

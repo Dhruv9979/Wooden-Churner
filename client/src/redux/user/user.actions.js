@@ -50,3 +50,17 @@ export const signOutFailure = (error) => ({
 	type: UserActionTypes.SIGN_OUT_FAILURE,
 	payload: error,
 });
+
+export const resetPasswordStart = (emailId) => ({
+	type: UserActionTypes.RESET_PASSWORD_START,
+	payload: emailId,
+});
+
+export const resetPasswordSuccess = () => ({
+	type: UserActionTypes.RESET_PASSWORD_SUCCESS,
+});
+
+export const resetPasswordFailure = (error) =>({
+	type: UserActionTypes.RESET_PASSWORD_FAILURE,
+	payload: error
+});

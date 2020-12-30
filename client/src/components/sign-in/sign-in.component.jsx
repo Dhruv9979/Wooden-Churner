@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { ReactComponent as CloseIcon } from '../../assets/close.svg';
-
 import {
     googleSignInStart,
     emailSignInStart,
@@ -17,13 +15,9 @@ import {
     SignInTitle,
     ButtonsBarContainer,
     ForgotPasswordContainer,
-    ModalContainer,
-    ModalInner,
-    CloseContainer,
-    ModalHeader,
-    ModalText,
-    Text,
 } from './sign-in.styles';
+
+import Modal from '../modal/modal.component';
 
 const SignIn = ({
     emailSignInStart,
@@ -34,8 +28,6 @@ const SignIn = ({
         email: '',
         password: '',
     });
-
-    const [emailId, setEmailId] = useState('');
 
     const { email, password } = userCredentials;
 
@@ -51,24 +43,34 @@ const SignIn = ({
         setUserCredentials({ ...userCredentials, [name]: value });
     };
 
+    const [emailId, setEmailId] = useState('');
+
     const submitResetPassword = async (event) => {
         event.preventDefault();
 
         resetPasswordStart(emailId);
-        toggleModalState();
+        toggleResetPasswordModalState();
+        toggleLinkSentModalState();
     };
 
     const changeResetPassword = (event) => {
         const { value } = event.target;
 
         setEmailId(value);
-        console.log(value);
     };
 
-    const [modalState, setmodalState] = useState(false);
+    const [resetPasswordModalState, setResetPasswordModalState] = useState(
+        false
+    );
 
-    const toggleModalState = () => {
-        setmodalState(!modalState);
+    const toggleResetPasswordModalState = () => {
+        setResetPasswordModalState(!resetPasswordModalState);
+    };
+
+    const [linkSentModalState, setLinkSentModalState] = useState(false);
+
+    const toggleLinkSentModalState = () => {
+        setLinkSentModalState(!linkSentModalState);
     };
 
     return (
@@ -104,37 +106,31 @@ const SignIn = ({
                     </CustomButton>
                 </ButtonsBarContainer>
             </form>
-            <ForgotPasswordContainer to="#" onClick={toggleModalState}>
+            <ForgotPasswordContainer
+                to="#"
+                onClick={toggleResetPasswordModalState}
+            >
                 Forgot password?
             </ForgotPasswordContainer>
-            <ModalContainer className={modalState}>
-                <ModalInner>
-                    <ModalText>
-                        <ModalHeader>Forgot your password?</ModalHeader>
-                        <Text>
-                            Don't worry! Just fill in your email and we'll send
-                            you a link to reset your password.
-                        </Text>
-                        <form onSubmit={submitResetPassword}>
-                            <FormInput
-                                type="emailId"
-                                name="emailId"
-                                value={emailId}
-                                handleChange={changeResetPassword}
-                                label="Email Id"
-                                required
-                            />
-
-                            <CustomButton type="submit">
-                                Reset Password
-                            </CustomButton>
-                        </form>
-                    </ModalText>
-                    <CloseContainer to="#" onClick={toggleModalState}>
-                        <CloseIcon />
-                    </CloseContainer>
-                </ModalInner>
-            </ModalContainer>
+            <Modal
+                modalState={resetPasswordModalState}
+                toggleModalState={toggleResetPasswordModalState}
+                form={true}
+                header="Forgot your password?"
+                text="Don't worry! Just fill in your email and we'll send
+                            you a link to reset your password."
+                buttonText="Reset Password"
+                onSubmit={submitResetPassword}
+                onChange={changeResetPassword}
+                emailId={emailId}
+            />
+            <Modal
+                modalState={linkSentModalState}
+                toggleModalState={toggleLinkSentModalState}
+                form={false}
+                header="Link to reset your password has been sent to the specified email."
+                buttonText="OK"
+            />
         </SignInContainer>
     );
 };
@@ -143,7 +139,7 @@ const mapDispatchToProps = (dispatch) => ({
     googleSignInStart: () => dispatch(googleSignInStart()),
     emailSignInStart: (email, password) =>
         dispatch(emailSignInStart({ email, password })),
-    resetPasswordStart: (emailId) => dispatch(resetPasswordStart({emailId})),
+    resetPasswordStart: (emailId) => dispatch(resetPasswordStart({ emailId })),
 });
 
 export default connect(null, mapDispatchToProps)(SignIn);

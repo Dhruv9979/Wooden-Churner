@@ -1,19 +1,22 @@
 import styled, { css } from "styled-components";
 
 const buttonStyles = css`
-	background-color: black;
-	color: white;
+	background: #d6f5a4;
+	color: #762522;
 	border: none;
 
 	&:hover {
-		background-color: white;
-		color: black;
-		border: 1px solid black;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	&:active {
+		transform: scale(.9);
+		outline: none;
 	}
 `;
 
 const invertedButtonStyles = css`
-	background-color: white;
+	background: white;
 	color: black;
 	border: 1px solid black;
 
@@ -43,18 +46,18 @@ const getButtonStyles = (props) => {
 };
 
 export const CustomButtonContainer = styled.button`
-	min-width: 165px;
+	border-radius: 5px;
+	min-width: 125px;
 	width: auto;
 	height: 50px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
-	padding: 0 35px 0 35px;
+	padding: 0 10px 0 10px;
 	font-size: 15px;
 	text-transform: uppercase;
-	font-family: "Open Sans Condensed";
-	font-weight: bolder;
+	font-family: 'Poppins', serif;
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
-	${getButtonStyles}
+	${buttonStyles}
 `;

@@ -2,26 +2,16 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as MenuIcon } from '../../assets/menu.svg';
+import { ReactComponent as Waves } from '../../assets/waves-bottom.svg';
 
-import {
-    HeaderContainer,
-    LogoContainer,
-    OptionsContainer,
-    NavbarNav,
-    ListItem,
-    IconButton,
-    Dropdown,
-    OptionLink,
-    OptionDiv,
-} from './header.styles';
+import { HeaderContainer, LogoContainer, WavesContainer, MenuContainer } from './header.styles';
+import BurgerMenu from '../burger-menu/burger-menu.component';
 
 export const Header = ({ currentUser, hidden, signOutStart }) => {
     const [open, setOpen] = useState(false);
@@ -32,77 +22,21 @@ export const Header = ({ currentUser, hidden, signOutStart }) => {
             <LogoContainer to="/">
                 <Logo className="logo" />
             </LogoContainer>
-            <Navbar>
-                <CartIcon title="Cart" />
-                <NavItem icon={<MenuIcon />} closeMenu={closeMenu} open={open}>
-                    <DropdownMenu
-                        currentUser={currentUser}
-                        signOutStart={signOutStart}
-                        closeMenu={closeMenu}
-                    />
-                </NavItem>
-            </Navbar>
+            <MenuContainer>
+            <BurgerMenu
+                currentUser={currentUser}
+                signOutStart={signOutStart}
+                closeMenu={closeMenu}
+                open={open}
+            />
             {hidden ? null : <CartDropdown />}
+            </MenuContainer>
+            <WavesContainer>
+                <Waves />
+            </WavesContainer>
         </HeaderContainer>
     );
 };
-
-function Navbar({children}) {
-    return (
-        <OptionsContainer>
-            <NavbarNav>{children}</NavbarNav>
-        </OptionsContainer>
-    );
-}
-
-function NavItem({ icon, closeMenu, open, children }) {
-    return (
-        <ListItem>
-            <IconButton to="#" onClick={closeMenu}>
-                {icon}
-            </IconButton>
-            {open && children}
-        </ListItem>
-    );
-}
-
-function DropdownMenu({ currentUser, signOutStart, closeMenu }) {
-    return (
-        <Dropdown>
-            <OptionLink to="/" onClick={closeMenu}>
-                HOME
-            </OptionLink>
-            <OptionLink to="/shop" onClick={closeMenu}>
-                ABOUT
-            </OptionLink>
-            <OptionLink to="/shop" onClick={closeMenu}>
-                SHOP
-            </OptionLink>
-            <OptionLink to="/contact" onClick={closeMenu}>
-                CONTACT
-            </OptionLink>
-            {currentUser && (
-                <OptionLink to="/orders" onClick={closeMenu}>
-                    MY ORDERS
-                </OptionLink>
-            )}
-            {currentUser ? (
-                <OptionDiv
-                    onClick={() => {
-                        signOutStart();
-                        closeMenu();
-                    }}
-                >
-                    SIGN OUT
-                </OptionDiv>
-            ) : (
-                <OptionLink to="/signIn" onClick={closeMenu}>
-                    SIGN IN
-                </OptionLink>
-            )}
-        </Dropdown>
-    );
-}
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,

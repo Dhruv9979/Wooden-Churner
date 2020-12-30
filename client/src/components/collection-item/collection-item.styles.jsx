@@ -40,10 +40,13 @@ export const AddButton = styled(CustomButton)`
     display: none;
 
     @media screen and (max-width: 800px) {
+        top: 210px;
         display: block;
         opacity: 0.9;
         min-width: unset;
         padding: 0 10px;
+        font-size: 14px;
+        font-weight: bolder;
     }
 `;
 
@@ -62,24 +65,22 @@ export const BackgroundImage = styled(Link)`
 
 BackgroundImage.displayName = 'BackgroundImage';
 
-
 export const TextContainer = styled.div`
-	position: relative;
-	z-index: 1;
+    position: relative;
+    z-index: 1;
     font-size: 35px;
     text-transform: uppercase;
-	top: 50%;
-	left: 5%;
-	color: darkred;
-	transform: rotate(65deg);
+    top: 50%;
+    left: 5%;
+    transform: rotate(65deg);
 `;
 
 export const TestOpacity = styled.div`
-    position:absolute;  
-    top:0;  
-    bottom:0;
-    left:0;  
-    width:100%;  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #fff;
     opacity: 0.8;
 `;
@@ -93,6 +94,11 @@ export const CollectionFooterContainer = styled.div`
     justify-content: space-between;
     padding: 0 45px;
     font-size: 15px;
+    color: #762522;
+    @media screen and (max-width: 800px) {
+        padding: 0 15px;
+        height: 25%;
+    }
 `;
 
 CollectionFooterContainer.displayName = 'CollectionFooterContainer';
@@ -101,6 +107,11 @@ export const NameContainer = styled.span`
     width: 100%;
     margin-bottom: 15px;
     text-align: center;
+
+    @media screen and (max-width: 800px) {
+        width: 70%;
+        text-align: left;
+    }
 `;
 
 NameContainer.displayName = 'NameContainer';

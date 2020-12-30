@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { ReactComponent as ShoppingIconSVG } from "../../assets/shopping-bag.svg";
 
 export const CartContainer = styled.div`
-	top: 5px;
-	width: 60px;
-	height: 60px;
+	margin: 10px 15px;
+	width: 35px;
+	height: 35px;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -24,13 +24,14 @@ export const ShoppingIcon = styled(ShoppingIconSVG)`
 
 export const ItemCountContainer = styled.span`
 	position: absolute;
-	font-size: 24px;
+	font-size: 15px;
 	font-weight: bold;
-	bottom: 4.5px;
+	bottom: 2px;
 `;
 ItemCountContainer.displayName = "ItemCountContainer";
 
 export const TitleContainer = styled.span`
 	position: absolute;
-	top: 55px;
+	top: 32px;
+	font-size: 18px;
 `;

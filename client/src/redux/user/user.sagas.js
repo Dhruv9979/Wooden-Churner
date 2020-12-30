@@ -89,7 +89,6 @@ export function* resetPassword({ payload: { emailId } }) {
     try {
 		console.log(emailId);
         yield auth.sendPasswordResetEmail(emailId);
-        alert('Email to reset your password has been sent.');
         yield put(resetPasswordSuccess());
     } catch (error) {
         yield put(resetPasswordFailure(error));

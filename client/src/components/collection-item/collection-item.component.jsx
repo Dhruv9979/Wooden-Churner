@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import { addItem } from '../../redux/cart/cart.actions';
+
 
 import {
     CollectionItemContainer,
@@ -18,7 +19,9 @@ import {
     TestOpacity,
 } from './collection-item.styles';
 
-export const CollectionItem = ({ currentUser, item, addItem, match }) => {
+export const CollectionItem = ({ currentUser, item, addItem, match, toggleModalState }) => {
+    
+
     const { name, price, imageUrl, routeName, type, stock } = item;
     const outOfStock = 'Out Of Stock';
     const routingProducts = routeName
@@ -61,9 +64,7 @@ export const CollectionItem = ({ currentUser, item, addItem, match }) => {
             ) : (
                 <AddButton
                     onClick={() =>
-                        currentUser
-                            ? addItem(item)
-                            : alert('Please sign in to add items to cart.')
+                        currentUser ? addItem(item) : toggleModalState()
                     }
                 >
                     ADD TO CART

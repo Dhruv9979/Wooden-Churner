@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
+import Modal from '../modal/modal.component';
 
 import { signUpStart } from "../../redux/user/user.actions";
 
@@ -20,7 +21,7 @@ const SignUp = ({ signUpStart }) => {
 		event.preventDefault();
 
 		if (password !== confirmPassword) {
-			alert("Passwords don't match");
+			toggleModalState();
 			return;
 		}
 
@@ -32,6 +33,12 @@ const SignUp = ({ signUpStart }) => {
 
 		setUserCredentials({ ...userCredentials, [name]: value });
 	};
+
+	const [modalState, setModalState] = useState(false);
+
+    const toggleModalState = () => {
+        setModalState(!modalState);
+    };
 
 	return (
 		<SignUpContainer>
@@ -72,6 +79,13 @@ const SignUp = ({ signUpStart }) => {
 				/>
 				<CustomButton type="submit">SIGN UP</CustomButton>
 			</form>
+			<Modal
+                modalState={modalState}
+                toggleModalState={toggleModalState}
+                form={false}
+                header="Passwords don't match. Please try again."
+                buttonText="OK"
+            />
 		</SignUpContainer>
 	);
 };

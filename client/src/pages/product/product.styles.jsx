@@ -35,8 +35,8 @@ export const OptionButton = styled.button`
     text-decoration: none;
     font-size: 20px;
     margin: 4px 2px;
-	cursor: pointer;
-    outline:none;
-    color: #762522;
-    font-family: "Poppins", serif;
+    cursor: pointer;
+    outline: none;
+    color: #309030;
+    font-family: 'Poppins', serif;
 `;

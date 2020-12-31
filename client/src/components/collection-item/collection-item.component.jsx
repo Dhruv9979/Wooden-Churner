@@ -7,6 +7,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import { addItem } from '../../redux/cart/cart.actions';
 
+import { ReactComponent as SplashImage } from '../../assets/splash.svg';
 
 import {
     CollectionItemContainer,
@@ -17,6 +18,7 @@ import {
     PriceContainer,
     TextContainer,
     TestOpacity,
+    SplashContainer
 } from './collection-item.styles';
 
 export const CollectionItem = ({ currentUser, item, addItem, match, toggleModalState }) => {
@@ -33,6 +35,9 @@ export const CollectionItem = ({ currentUser, item, addItem, match, toggleModalS
 
     const product = (
         <CollectionItemContainer>
+        <SplashContainer >
+        <SplashImage />
+        </SplashContainer>
             {stock === outOfStock ? (
                 <BackgroundImage
                     to={routingProducts}

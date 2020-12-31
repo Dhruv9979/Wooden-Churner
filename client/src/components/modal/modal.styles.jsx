@@ -9,7 +9,7 @@ export const ModalContainer = styled.div`
 	top: 0;
 	left: 0;
 	min-width: 100vw;
-	min-height: 100vh;
+	height: ${({ vh }) => `${vh}px`};
 	background: rgba(0, 0, 0, 0.7);
 	display: flex;
 	z-index: 2;

@@ -122,3 +122,23 @@ export const PriceContainer = styled.span`
 `;
 
 PriceContainer.displayName = 'PriceContainer';
+
+export const SplashContainer = styled.div`
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(130deg);
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 350px;
+        transform: rotateY(180deg);
+        color: #fd
+    }
+`;

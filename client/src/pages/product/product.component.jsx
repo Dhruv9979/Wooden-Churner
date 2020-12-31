@@ -31,7 +31,8 @@ export const ProductPage = ({ items, history }) => {
                 modalState={modalState}
                 toggleModalState={toggleModalState}
                 form={false}
-                header="Please Sign In/Sign Up by visiting to Sign in Page to add items to cart."
+				header="Please Sign In/Sign Up by visiting to Sign in Page to add items to cart."
+				text="This will help you to check and order again all of your previous orders, and also track them."
             />
             <OptionButton onClick={() => history.goBack()}>
                 <FontAwesomeIcon

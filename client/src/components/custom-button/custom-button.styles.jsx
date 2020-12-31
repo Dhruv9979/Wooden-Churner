@@ -15,35 +15,35 @@ const buttonStyles = css`
 	}
 `;
 
-const invertedButtonStyles = css`
-	background: white;
-	color: black;
-	border: 1px solid black;
+// const invertedButtonStyles = css`
+// 	background: white;
+// 	color: black;
+// 	border: 1px solid black;
 
-	&:hover {
-		background-color: black;
-		color: white;
-		border: none;
-	}
-`;
+// 	&:hover {
+// 		background-color: black;
+// 		color: white;
+// 		border: none;
+// 	}
+// `;
 
-const googleSignInStyles = css`
-	background-color: #4285f4;
-	color: white;
+// const googleSignInStyles = css`
+// 	background-color: #4285f4;
+// 	color: white;
 
-	&:hover {
-		background-color: #357ae8;
-		border: none;
-	}
-`;
+// 	&:hover {
+// 		background-color: #357ae8;
+// 		border: none;
+// 	}
+// `;
 
-const getButtonStyles = (props) => {
-	if (props.isGoogleSignIn) {
-		return googleSignInStyles;
-	}
+// const getButtonStyles = (props) => {
+// 	if (props.isGoogleSignIn) {
+// 		return googleSignInStyles;
+// 	}
 
-	return props.inverted ? invertedButtonStyles : buttonStyles;
-};
+// 	return props.inverted ? invertedButtonStyles : buttonStyles;
+// };
 
 export const CustomButtonContainer = styled.button`
 	border-radius: 5px;

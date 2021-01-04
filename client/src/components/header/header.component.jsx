@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import { connect } from 'react-redux';
+
 import { createStructuredSelector } from 'reselect';
 
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
@@ -9,8 +11,15 @@ import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as Waves } from '../../assets/waves-bottom.svg';
+import { ReactComponent as Phone } from '../../assets/phone.svg';
 
-import { HeaderContainer, LogoContainer, WavesContainer, MenuContainer } from './header.styles';
+import {
+    HeaderContainer,
+    LogoContainer,
+    PhoneContainer,
+    WavesContainer,
+    MenuContainer,
+} from './header.styles';
 import BurgerMenu from '../burger-menu/burger-menu.component';
 
 export const Header = ({ currentUser, hidden, signOutStart }) => {
@@ -22,14 +31,21 @@ export const Header = ({ currentUser, hidden, signOutStart }) => {
             <LogoContainer to="/">
                 <Logo className="logo" />
             </LogoContainer>
+
             <MenuContainer>
-            <BurgerMenu
-                currentUser={currentUser}
-                signOutStart={signOutStart}
-                closeMenu={closeMenu}
-                open={open}
-            />
-            {hidden ? null : <CartDropdown />}
+                <PhoneContainer>
+                    <a href="tel:+91-80070-00739">
+                        <Phone />
+                    </a>
+                </PhoneContainer>
+                <BurgerMenu
+                    currentUser={currentUser}
+                    signOutStart={signOutStart}
+                    closeMenu={closeMenu}
+                    open={open}
+                />
+
+                {hidden ? null : <CartDropdown />}
             </MenuContainer>
             <WavesContainer>
                 <Waves />

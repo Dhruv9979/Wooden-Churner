@@ -1,18 +1,20 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-	background: #d6f5a4;
-	color: #762522;
-	border: none;
+    background: linear-gradient(to right, #9dfbc8, #f5f186);
+    color: #762522;
+    border: none;
 
-	&:hover {
-		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	}
+    &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
 
-	&:active {
-		transform: scale(.9);
-		outline: none;
-	}
+    &:active {
+        transform: scale(0.9);
+        outline: none;
+        content: "";
+    }
 `;
 
 // const invertedButtonStyles = css`
@@ -46,18 +48,18 @@ const buttonStyles = css`
 // };
 
 export const CustomButtonContainer = styled.button`
-	border-radius: 5px;
-	min-width: 125px;
-	width: auto;
-	height: 50px;
-	letter-spacing: 0.5px;
-	line-height: 50px;
-	padding: 0 10px 0 10px;
-	font-size: 15px;
-	text-transform: uppercase;
-	font-family: 'Poppins', serif;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	${buttonStyles}
+    border-radius: 5px;
+    min-width: 125px;
+    width: auto;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    padding: 0 10px 0 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Poppins', serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    ${buttonStyles}
 `;

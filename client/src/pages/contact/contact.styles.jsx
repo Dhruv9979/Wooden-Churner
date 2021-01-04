@@ -88,3 +88,17 @@ export const TextAreaInput = styled.textarea`
         ${shrinkLabelStyles}
     }
 `;
+
+export const PhoneContainer = styled.div`
+    svg {
+        top: 15px;
+        position: relative;
+        width: 30px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    .phone-fill {
+        fill: #309030;
+    }
+`;

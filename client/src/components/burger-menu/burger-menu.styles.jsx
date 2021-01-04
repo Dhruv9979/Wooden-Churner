@@ -10,7 +10,25 @@ const OptionContainerStyles = css`
     border-radius: 8px;
     transition: background 500ms;
     &:hover {
-        filter: brightness(2);
+        background: #f5f186;
+    }
+`;
+
+export const IconContainer = styled.span`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    transition: filter 300ms;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+
+    .icons {
+        fill: #762522;
+        width: 30px;
+        height: 30px;
     }
 `;
 
@@ -65,7 +83,6 @@ export const Dropdown = styled.div`
     background-color: #d6f5a4;
     border: 1px solid #474a4d;
     border-radius: 8px;
-    padding: 1rem;
     overflow: hidden;
     transition: height 500ms ease;
 `;

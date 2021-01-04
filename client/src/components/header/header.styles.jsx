@@ -37,6 +37,26 @@ export const MenuContainer = styled.div`
     justify-content: flex-end;
 `;
 
+export const PhoneContainer = styled.div`
+    svg {
+        top: 15px;
+        position: relative;
+        width: 64px;
+        height: 40px;
+    }
+
+    .phone-fill {
+        fill: #762522;
+    }
+
+    @media screen and (max-width: 800px) {
+        svg {
+            left: 50px;
+            top: 5px;
+        }
+    }
+`;
+
 export const WavesContainer = styled.div`
     z-index: -1;
     position: absolute;

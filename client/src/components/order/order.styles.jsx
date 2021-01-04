@@ -4,7 +4,8 @@ import CustomButton from "../custom-button/custom-button.component";
 export const OrderContainer = styled.div`
     padding: 40px;
     margin: 20px 0;
-    border: 1px solid lightgrey;
+    border: 2px dashed #762522;
+    border-radius: 60px;
     background-color: white;
     position: relative;
 `;

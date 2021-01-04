@@ -2,6 +2,12 @@ import React from 'react';
 
 import CartIcon from '../cart-icon/cart-icon.component';
 import { ReactComponent as MenuIcon } from '../../assets/menu.svg';
+import { ReactComponent as HomeIcon } from '../../assets/home.svg';
+import { ReactComponent as ShopIcon } from '../../assets/shop.svg';
+import { ReactComponent as SignInIcon } from '../../assets/sign-in.svg';
+import { ReactComponent as PhoneIcon } from '../../assets/phone.svg';
+import { ReactComponent as AboutIcon } from '../../assets/about.svg';
+import { ReactComponent as OrderIcon } from '../../assets/order.svg';
 
 import {
     OptionsContainer,
@@ -11,6 +17,7 @@ import {
     Dropdown,
     OptionLink,
     OptionDiv,
+    IconContainer,
 } from './burger-menu.styles';
 
 const BurgerMenu = ({ currentUser, signOutStart, closeMenu, open }) => {
@@ -48,38 +55,101 @@ function NavItem({ icon, closeMenu, open, children }) {
 }
 
 function DropdownMenu({ currentUser, signOutStart, closeMenu }) {
+    const signOut = () => {
+        signOutStart();
+        closeMenu();
+    };
+
+    function DropdownItem({
+        toPage,
+        closeMenu,
+        signOut,
+        leftIcon,
+        link,
+        children,
+    }) {
+        return (
+            <>
+                {link ? (
+                    <OptionLink to={toPage} onClick={closeMenu}>
+                        <IconContainer>{leftIcon}</IconContainer>
+                        {children}
+                    </OptionLink>
+                ) : (
+                    <OptionDiv onClick={signOut ? signOut : closeMenu}>
+                        <IconContainer>{leftIcon}</IconContainer>
+                        {children}
+                    </OptionDiv>
+                )}
+            </>
+        );
+    }
+
     return (
         <Dropdown>
-            <OptionLink to="/" onClick={closeMenu}>
+            <DropdownItem
+                toPage="/"
+                closeMenu={closeMenu}
+                leftIcon={<HomeIcon />}
+                link={true}
+            >
                 HOME
-            </OptionLink>
-            <OptionLink to="/shop" onClick={closeMenu}>
+            </DropdownItem>
+            <DropdownItem
+                toPage="/shop"
+                closeMenu={closeMenu}
+                leftIcon={<AboutIcon />}
+                link={true}
+            >
                 ABOUT
-            </OptionLink>
-            <OptionLink to="/shop" onClick={closeMenu}>
-                SHOP
-            </OptionLink>
-            <OptionLink to="/contact" onClick={closeMenu}>
-                CONTACT
-            </OptionLink>
+            </DropdownItem>
+            <DropdownItem
+                toPage="/shop"
+                closeMenu={closeMenu}
+                leftIcon={<ShopIcon />}
+                link={true}
+            >
+                Shop
+            </DropdownItem>
+            <DropdownItem
+                toPage="/contact"
+                closeMenu={closeMenu}
+                leftIcon={<PhoneIcon />}
+                link={true}
+            >
+                Contact
+            </DropdownItem>
             {currentUser && (
-                <OptionLink to="/orders" onClick={closeMenu}>
+                <DropdownItem
+                    toPage="/orders"
+                    closeMenu={closeMenu}
+                    leftIcon={<OrderIcon />}
+                    link={true}
+                >
                     MY ORDERS
-                </OptionLink>
+                </DropdownItem>
             )}
             {currentUser ? (
-                <OptionDiv
-                    onClick={() => {
-                        signOutStart();
-                        closeMenu();
-                    }}
+                <DropdownItem
+                    // onClick={() => {
+                    //     signOutStart();
+                    //     closeMenu();
+                    // }}
+                    signOut={signOut}
+                    leftIcon={<SignInIcon />}
+                    link={false}
                 >
                     SIGN OUT
-                </OptionDiv>
+                </DropdownItem>
             ) : (
-                <OptionLink to="/signIn" onClick={closeMenu}>
+                <DropdownItem
+                    toPage="/signIn"
+                    closeMenu={closeMenu}
+                    leftIcon={<SignInIcon />}
+                    link={true}
+                >
                     SIGN IN
-                </OptionLink>
+                </DropdownItem>
             )}
         </Dropdown>
     );

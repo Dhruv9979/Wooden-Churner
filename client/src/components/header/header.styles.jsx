@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
-    background: linear-gradient(to right, #ffa500, #f5f186);
+    background: linear-gradient(to right, #9dfbc8, #f5f186);
     height: 150px;
     width: 100%;
     display: flex;

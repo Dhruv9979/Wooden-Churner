@@ -11,5 +11,5 @@ export const ProductInfoContainer = styled.div`
 	border: 2px dashed #762522;
 	border-radius: 60px;
 	overflow: auto;
-	color: #762522;
+	color: #309030;
 `;

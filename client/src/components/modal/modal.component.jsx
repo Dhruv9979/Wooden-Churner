@@ -30,7 +30,7 @@ const Modal = ({
     // console.log('window inner height: ', window.innerHeight);
 
     return (
-        <ModalContainer className={modalState} height={height} >
+        <ModalContainer className={modalState} height={height}>
             <ModalInner>
                 <ModalText>
                     <ModalHeader>{header}</ModalHeader>

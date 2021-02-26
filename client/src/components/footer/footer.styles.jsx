@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
-    background: linear-gradient(to right, #ffa500, #f5f186);
+    background: linear-gradient(to right, #9dfbc8, #f5f186);
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;

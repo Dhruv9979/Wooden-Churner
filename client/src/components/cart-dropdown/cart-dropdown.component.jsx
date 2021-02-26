@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
@@ -15,8 +15,20 @@ import {
 } from './cart-dropdown.styles';
 
 export const CartDropdown = ({ cartItems, history, dispatch }) => {
+    const dropDownRef = useRef(null);
+
+    useEffect(() => {
+        dropDownRef.current.focus();
+    }, []);
+
     return (
-        <CartDropdownContainer>
+        <CartDropdownContainer
+            ref={dropDownRef}
+            tabIndex="0"
+            onBlur={() => {
+                dispatch(toggleCartHidden());
+            }}
+        >
             <CartItemsContainer>
                 {cartItems.length ? (
                     cartItems.map((cartItem) => (
@@ -29,6 +41,10 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => {
                 )}
             </CartItemsContainer>
             <CartDropdownButton
+                onMouseDown={(e) => {
+                    // prevent default triggering blur
+                    e.preventDefault();
+                }}
                 onClick={() => {
                     history.push('/checkout');
                     dispatch(toggleCartHidden());

@@ -8,7 +8,10 @@ import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import { CartContainer, ShoppingIcon, ItemCountContainer, TitleContainer } from "./cart-icon.styles";
 
 export const CartIcon = ({ toggleCartHidden, itemCount, title }) => (
-	<CartContainer onClick={toggleCartHidden}>
+	<CartContainer onClick={toggleCartHidden} onMouseDown={(e) => {
+        // prevent triggering blur
+        e.preventDefault()
+      }}>
 		<TitleContainer>{title}</TitleContainer>
 		<ShoppingIcon />
 		<ItemCountContainer>{itemCount}</ItemCountContainer>

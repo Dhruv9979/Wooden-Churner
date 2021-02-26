@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +18,10 @@ import {
     OptionButton,
 } from './product.styles';
 
-export const ProductPage = ({ items, history }) => {
+export const ProductPage = ({ items }) => {
+
+    const history = useHistory();
+    
     const { name, products, description } = items;
 
     const [modalState, setModalState] = useState(false);

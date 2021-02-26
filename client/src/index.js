@@ -9,11 +9,13 @@ import * as serviceWorker from './serviceWorker';
 
 import "./index.css";
 import App from "./App";
+import ScrollToTop from "./components/scroll-to-top/scrollToTop.component";
 
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
 			<PersistGate persistor={persistor}>
+			<ScrollToTop />
 				<App />
 			</PersistGate>
 		</BrowserRouter>

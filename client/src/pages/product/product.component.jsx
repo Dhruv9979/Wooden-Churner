@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
+
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+// import soundfile from '../../assets/Badam_Jingle_30_Sec_Food.mp3';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -16,13 +20,13 @@ import {
     ProductTitle,
     ProductItemsContainer,
     OptionButton,
+    AudioPlayerContainer,
 } from './product.styles';
 
 export const ProductPage = ({ items }) => {
-
     const history = useHistory();
-    
-    const { name, products, description } = items;
+
+    const { audio, name, products, description } = items;
 
     const [modalState, setModalState] = useState(false);
 
@@ -36,8 +40,8 @@ export const ProductPage = ({ items }) => {
                 modalState={modalState}
                 toggleModalState={toggleModalState}
                 form={false}
-				header="Please Sign In/Sign Up by visiting to Sign in Page to add items to cart."
-				text="This will help you to check and order again all of your previous orders, and also track them."
+                header="Please Sign In/Sign Up by visiting to Sign in Page to add items to cart."
+                text="This will help you to check and order again all of your previous orders, and also track them."
             />
             <OptionButton onClick={() => history.goBack()}>
                 <FontAwesomeIcon
@@ -50,6 +54,18 @@ export const ProductPage = ({ items }) => {
             {description && (
                 <ProductInformation description={description} name={name} />
             )}
+            {audio !== '' && (
+                <AudioPlayerContainer>
+                    <AudioPlayer
+                        src={audio}
+                        layout="horizontal-reverse"
+                        customAdditionalControls={[]}
+                        showJumpControls={false}
+                        customVolumeControls={[]}
+                    />
+                    
+                </AudioPlayerContainer>
+            )}
             <ProductItemsContainer>
                 {Object.entries(products).map(([key, val]) => (
                     <CollectionItem
@@ -59,7 +75,6 @@ export const ProductPage = ({ items }) => {
                     />
                 ))}
             </ProductItemsContainer>
-            
         </ProductPageContainer>
     );
 };

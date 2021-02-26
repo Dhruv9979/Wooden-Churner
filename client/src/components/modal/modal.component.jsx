@@ -27,7 +27,7 @@ const Modal = ({
 }) => {
     const height = document.documentElement.scrollHeight;
 
-    console.log('window inner height: ', window.innerHeight);
+    // console.log('window inner height: ', window.innerHeight);
 
     return (
         <ModalContainer className={modalState} height={height} >

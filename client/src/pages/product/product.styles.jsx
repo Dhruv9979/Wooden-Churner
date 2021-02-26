@@ -40,3 +40,12 @@ export const OptionButton = styled.button`
     color: #762522;
     font-family: 'Poppins', serif;
 `;
+
+export const AudioPlayerContainer = styled.div`
+    align-self: center;
+    width: 50%;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+`;

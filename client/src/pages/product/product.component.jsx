@@ -28,6 +28,10 @@ export const ProductPage = ({ items }) => {
 
     const { audio, name, products, description } = items;
 
+    const { food, cosmetic, diya } = audio || {};
+
+    console.log(food, cosmetic);
+
     const [modalState, setModalState] = useState(false);
 
     const toggleModalState = () => {
@@ -54,16 +58,43 @@ export const ProductPage = ({ items }) => {
             {description && (
                 <ProductInformation description={description} name={name} />
             )}
-            {audio !== '' && (
+            {diya && (
                 <AudioPlayerContainer>
                     <AudioPlayer
-                        src={audio}
+                        src={diya}
                         layout="horizontal-reverse"
                         customAdditionalControls={[]}
                         showJumpControls={false}
                         customVolumeControls={[]}
+                        header="Diya/Lamp Purpose"
                     />
-                    
+                    <br />
+                </AudioPlayerContainer>
+            )}
+
+            {food && (
+                <AudioPlayerContainer>
+                    <AudioPlayer
+                        src={food}
+                        layout="horizontal-reverse"
+                        customAdditionalControls={[]}
+                        showJumpControls={false}
+                        customVolumeControls={[]}
+                        header="Cooking Purposes"
+                    />
+                </AudioPlayerContainer>
+            )}
+            <br />
+            {cosmetic && (
+                <AudioPlayerContainer>
+                    <AudioPlayer
+                        src={cosmetic}
+                        layout="horizontal-reverse"
+                        customAdditionalControls={[]}
+                        showJumpControls={false}
+                        customVolumeControls={[]}
+                        header="Skin/Hair Care"
+                    />
                 </AudioPlayerContainer>
             )}
             <ProductItemsContainer>

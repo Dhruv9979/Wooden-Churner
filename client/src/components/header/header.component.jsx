@@ -11,12 +11,10 @@ import { signOutStart } from '../../redux/user/user.actions';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as Waves } from '../../assets/waves-bottom.svg';
-import { ReactComponent as Phone } from '../../assets/phone.svg';
 
 import {
     HeaderContainer,
     LogoContainer,
-    PhoneContainer,
     WavesContainer,
     MenuContainer,
 } from './header.styles';
@@ -33,11 +31,6 @@ export const Header = ({ currentUser, hidden, signOutStart }) => {
             </LogoContainer>
 
             <MenuContainer>
-                <PhoneContainer>
-                    <a href="tel:+91-80070-00739">
-                        <Phone />
-                    </a>
-                </PhoneContainer>
                 <BurgerMenu
                     currentUser={currentUser}
                     signOutStart={signOutStart}

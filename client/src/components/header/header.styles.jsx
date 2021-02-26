@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
     background: linear-gradient(to right, #9dfbc8, #f5f186);
-    height: 150px;
+    height: 170px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -22,8 +22,8 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
     height: 100%;
-    width: 70px;
-    padding: 12px;
+    width: 220px;
+    padding-left: 40px;
 
     @media screen and (max-width: 800px) {
         width: 50px;
@@ -35,26 +35,6 @@ export const MenuContainer = styled.div`
     padding-bottom: 80px;
     display: flex;
     justify-content: flex-end;
-`;
-
-export const PhoneContainer = styled.div`
-    svg {
-        top: 15px;
-        position: relative;
-        width: 64px;
-        height: 40px;
-    }
-
-    .phone-fill {
-        fill: #762522;
-    }
-
-    @media screen and (max-width: 800px) {
-        svg {
-            left: 50px;
-            top: 5px;
-        }
-    }
 `;
 
 export const WavesContainer = styled.div`

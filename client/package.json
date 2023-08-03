@@ -13,13 +13,12 @@
     "axios": "^0.20.0",
     "firebase": "^7.18.0",
     "lodash.memoize": "^4.1.2",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "node-sass": "^7.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-multi-carousel": "^2.5.5",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
@@ -53,6 +52,7 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "enzyme-to-json": "^3.6.1"
+    "enzyme-to-json": "^3.6.1",
+    "react-scripts": "^3.4.4"
   }
 }
